@@ -188,6 +188,16 @@ Feed Loop     → VJ-01-Atomic/insight/insight-[date]-[case].md
 
 ---
 
+## Benchmark — Kịch bản mẫu kênh tham chiếu (SocialLens 2026-10-30)
+
+| Note | Dùng cho | Mô tả |
+|---|---|---|
+| [[VJ-Dat/VJ-01-Atomic/framework/2026-10-30-benchmark-thuy-lam-vay-von-cho-dat]] | Case Study | Chuyển pattern Thuỷ sang 5 format Đạt (xe, điện thoại, giấy tờ…) |
+
+→ Lời thoại mẫu: [[MOC-Benchmark-SocialLens]]
+
+---
+
 ## Inbox
 
 → `VJ-00-Inbox/` | Templates: `VJ/_templates/`

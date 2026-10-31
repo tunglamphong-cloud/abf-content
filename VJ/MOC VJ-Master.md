@@ -116,3 +116,6 @@ Mỗi kênh có folder `VJ-01-Atomic/` với cùng cấu trúc:
 
 ### Templates
 - [[MOC-VJ-Templates]] — Quản lý toàn bộ template atomic notes
+
+### Benchmark
+- [[MOC-Benchmark-SocialLens]] — Kịch bản mẫu từ 4 kênh tham chiếu (SocialLens) + note phân tích pattern theo kênh đích

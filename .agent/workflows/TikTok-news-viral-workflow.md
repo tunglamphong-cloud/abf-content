@@ -2,7 +2,7 @@
 
 **Name:** TikTok-news-viral-workflow
 
-**Description:** Đây là quy trình để có thể tự động phân tích tin tức thô và sản xuất kịch bản news viral trên TikTok với độ dài kịch bản dao động từ 200-350 từ.
+**Description:** Đây là quy trình để có thể tự động phân tích tin tức thô và sản xuất kịch bản news viral trên TikTok với độ dài theo bảng "Độ Dài Theo Kênh × Format" (`tiktok-script-skill` L3) cho đúng VJ × format.
 
 **Inputs:** Link bài báo hoặc nội dung tin tức thô dưới dạng ảnh hoặc ghi âm + quan điểm, góc nhìn cá nhân về vấn đề này + insight/cmt của người xem
 
@@ -14,15 +14,15 @@
 
 - **Bài toán:** Chuyển hóa từ tin tức, báo chí khô khan thành kịch bản video ngắn viral trên TikTok nhằm cung cấp thông tin chính xác, hoặc sự thật
 - **Input:** Link bài báo hoặc nội dung tin tức thô dưới dạng ảnh hoặc ghi âm + quan điểm, góc nhìn cá nhân (theo mô hình 4F) về vấn đề này + insight/cmt của người xem + quan điểm chuyên gia (nếu có)
-- **Output:** Kịch bản text, dài khoảng 200-350 từ (1'-1'45s), dùng cho nền tảng TikTok (bao gồm Caption và hashtag)
+- **Output:** Kịch bản text, độ dài theo bảng "Độ Dài Theo Kênh × Format" (`tiktok-script-skill` L3) cho đúng VJ × format, dùng cho nền tảng TikTok (bao gồm Caption và hashtag)
 - **Hoàn thành khi:** Kịch bản vượt qua hệ thống QA Gates, không chứa từ cấm, không chứa thuật ngữ chuyên ngành khó hiểu.
 
 ---
 
-## PHASE 0: ĐÃ ĐƯỢC XỬ LÝ BỞI GEMINI PRE-PROCESSING
+## PHASE 0: ĐÃ ĐƯỢC XỬ LÝ BỞI CLAUDE.md PRE-PROCESSING
 
-> ⚠️ Phase 0 (đọc memory, đọc input, upload NbLM, 3 frameworks, hỏi VJ góc nhìn, search vault) đã được GEMINI.md Phase 0 thực hiện trước khi load workflow này. Agent BỎ QUA phase này và bắt đầu từ Phase 1.
-> Context từ GEMINI Phase 0 sẽ được truyền vào Phase 1.
+> ⚠️ Phase 0 (đọc memory, đọc input, upload NbLM, 3 frameworks, hỏi VJ góc nhìn, search vault) đã được CLAUDE.md Phase 0 thực hiện trước khi load workflow này. Agent BỎ QUA phase này và bắt đầu từ Phase 1.
+> Context từ CLAUDE.md Phase 0 sẽ được truyền vào Phase 1.
 
 ---
 
@@ -122,7 +122,7 @@ Chấm điểm 5 angles theo 5 tiêu chí có trọng số. Công bố WINNER r�
 ### Mục tiêu
 Gom toàn bộ output từ Phase 1 + Phase 2 thành 1 khối MD duy nhất trong working memory. Bắt buộc trước khi viết bất kỳ phần nào của kịch bản — tránh tràn context ở các phase sau.
 
-### Không gọi skill — GEMINI tự tổng hợp theo template:
+### Không gọi skill — Claude tự tổng hợp theo template:
 
 ```
 # CONTEXT FILE — [topic-slug] — [dd/mm/yy]
@@ -179,7 +179,7 @@ Gom toàn bộ output từ Phase 1 + Phase 2 thành 1 khối MD duy nhất trong
 ### Skills
 
 **Bước 3.1** → GỌI: `[hook-writer]`
-Viết 3 phiên bản hook theo 3 patterns khác nhau từ bảng bên dưới. Mỗi hook 20–50 từ (3–7 giây đọc).
+Viết 3 phiên bản hook theo 3 patterns khác nhau từ bảng bên dưới. Mỗi hook: câu hook mở đầu ≤10 từ (HARD RULE ① của `tiktok-script-skill`); cả đoạn hook + pull-up 20–40 từ (3–7 giây đọc).
 
 **Bước 3.2** → GỌI: `[success-framework-scorer]`
 Chấm điểm 3 phiên bản hook theo framework SUCCESS (Chip & Dan Heath). Đối chiếu từng hook với 6 tiêu chí, tính tổng điểm, xác nhận hoặc thay thế RECOMMENDED từ bước 3.1 dựa trên điểm số. Chỉ chạy SAU KHI hook-writer đã trả về đủ 3 phiên bản hook.
@@ -187,7 +187,7 @@ Chấm điểm 3 phiên bản hook theo framework SUCCESS (Chip & Dan Heath). Đ
 ### ✅ Pass khi
 
 - Có đủ 3 phiên bản hook với 3 patterns KHÁC NHAU
-- Mỗi hook có độ dài 20–40 từ
+- Mỗi hook: câu hook mở đầu ≤10 từ (HARD RULE ① của `tiktok-script-skill`); cả đoạn hook + pull-up 20–40 từ
 - Mỗi hook có lý do hiệu quả rõ ràng
 - success-framework-scorer đã chạy và trả về bảng điểm SUCCESS đầy đủ cho cả 3 hooks
 - FINAL RECOMMENDED được xác nhận sau khi đối chiếu SUCCESS score — có ghi rõ giữ nguyên hay thay thế và tại sao
@@ -196,7 +196,7 @@ Chấm điểm 3 phiên bản hook theo framework SUCCESS (Chip & Dan Heath). Đ
 ### ❌ Fail thì
 
 - 3 hooks dùng cùng 1 pattern: Gọi lại hook-writer với yêu cầu buộc đa dạng hóa pattern
-- Tất cả 3 hooks có SUCCESS score < 60%: Gọi lại hook-writer để viết lại từ đầu — không chọn hook chất lượng thấp
+- Tất cả 3 hooks có SUCCESS score < 4/6 (ngưỡng của `success-framework-scorer`): Gọi lại hook-writer để viết lại từ đầu — không chọn hook chất lượng thấp
 - Hook không bám vào WINNER Angle: Gọi lại hook-writer với context angle rõ ràng hơn
 
 ---
@@ -205,14 +205,14 @@ Chấm điểm 3 phiên bản hook theo framework SUCCESS (Chip & Dan Heath). Đ
 
 ### Mục tiêu
 
-Đến cuối phase này, agent phải có 1 kịch bản hoàn chỉnh bao gồm: Title + Hook + Body + CTA + Caption & Hashtag. Kịch bản phải đọc như người thật nói — không có dấu hiệu AI viết và nằm trong giới hạn 200-350 từ.
+Đến cuối phase này, agent phải có 1 kịch bản hoàn chỉnh bao gồm: Title + Hook + Body + CTA + Caption & Hashtag. Kịch bản phải đọc như người thật nói — không có dấu hiệu AI viết và nằm trong khoảng độ dài của VJ × format (bảng L3 `tiktok-script-skill`).
 
 ### Nguồn — 3 thành phần bắt buộc
 
 1. **CONTEXT FILE** từ Phase 2.5 — nguồn dữ kiện duy nhất, không đọc lại phase cũ
 2. **[CHANNEL STRATEGY]** từ Bước 2.5 — định hướng kênh, chân dung khách hàng, tone tổng thể
 3. **[FORMAT RULE]** từ Bước 2.5 — quy tắc cấu trúc body, CTA, title của format
-4. **[EXAMPLE SCRIPTS] + [EXAMPLE ANALYSIS]** từ Bước 2.5/2.6 — nhại cấu trúc, độ dài, từ đặc trưng; tránh pattern trong ④ "Điều KHÔNG có"
+4. **[EXAMPLE SCRIPTS] + [EXAMPLE ANALYSIS]** từ Bước 2.5/2.6 — nhại cấu trúc, từ đặc trưng (KHÔNG nhại độ dài examples — độ dài theo chuẩn 500–700 từ của `tiktok-script-skill`); tránh pattern trong ④ "Điều KHÔNG có"
 
 > ⚠️ Trước khi gọi bất kỳ skill nào: đọc `[EXAMPLE ANALYSIS]` ①②③④⑤⑥ — dùng làm constraint cho toàn bộ phase này.
 > - ⑤ Cách câu kết nối: **mỗi câu phải là phản ứng cảm xúc tự nhiên với câu trước** — không liệt kê thông tin độc lập
@@ -221,10 +221,10 @@ Chấm điểm 3 phiên bản hook theo framework SUCCESS (Chip & Dan Heath). Đ
 ### Skills — thực hiện theo thứ tự
 
 **Bước 4.1** → GỌI: `[body-writer]`
-Viết body 120-250 từ theo cung bậc cảm xúc: Context → Mechanism → Impact → Insight. Input chính: RECOMMENDED Hook + toàn bộ phân tích Phase 1 + WINNER Angle.
+Viết body 420–600 từ (mỗi 60–80 từ có 1 câu hỏi hoặc 1 cú lật) theo cung bậc cảm xúc: Context → Mechanism → Impact → Insight. Input chính: RECOMMENDED Hook + toàn bộ phân tích Phase 1 + WINNER Angle.
 
 **Bước 4.2** → GỌI: `[cta-writer]`
-Viết CTA 20-40 từ gồm: Restate insight + Discussion question + Soft CTA. Input chính: Body + WINNER Angle.
+Viết CTA 30–60 từ gồm: Restate insight + Discussion question + Soft CTA. Input chính: Body + WINNER Angle.
 
 **Bước 4.3** → GỌI: `[title-writer]`
 Viết 3 phiên bản tiêu đề video (8-14 từ), chọn 1 RECOMMENDED. Input chính: Hook + Body + CTA.
@@ -238,7 +238,7 @@ Biến đổi toàn bộ kịch bản (Hook + Body + CTA) thành ngôn ngữ nó
 ### ✅ Pass khi
 
 - Kịch bản có đủ 5 phần: Hook, Body, CTA, Title, Caption + Hashtag
-- Tổng từ số kịch bản chính (Hook + Body + CTA): 200-350 từ
+- Tổng từ số kịch bản chính (Hook + Body + CTA): nằm trong khoảng của VJ × format (bảng L3 `tiktok-script-skill`)
 - human-tone-injector đã chạy và báo cáo "Human Score ≥ 90/100"
 - Caption có 3-5 hashtag đúng format TikTok (# không có dấu cách)
 
@@ -274,12 +274,12 @@ Quét toàn bộ kịch bản tìm từ cấm + vi phạm chính sách TikTok VN
 → GỌI: `[human-authenticity-scorer]`
 Chấm điểm tính người lần cuối sau tất cả chỉnh sửa. Output: Authenticity Score /100 + danh sách câu/cụm từ cần sửa (nếu có).
 
-→ **[SIMILARITY SCORE]** — Không cần gọi skill, GEMINI tự chấm dựa trên `[EXAMPLE ANALYSIS]`:
+→ **[SIMILARITY SCORE]** — Không cần gọi skill, Claude tự chấm dựa trên `[EXAMPLE ANALYSIS]`:
 
 ```
 SIMILARITY SCORE
 ① Cấu trúc   : [X/10] — hook/body/CTA có khớp pattern phổ biến ở [EXAMPLE ANALYSIS]② không?
-② Độ dài      : [X/10] — tổng từ số có nằm trong ±20% so với độ dài trung bình examples?
+② Độ dài      : [X/10] — tổng từ số (Hook+Body+CTA) có nằm trong khoảng của VJ × format (bảng L3 `tiktok-script-skill`)?
 ③ Từ đặc trưng: [X/10] — có dùng ≥3 cụm từ từ [EXAMPLE ANALYSIS]③? Liệt kê các cụm đã dùng.
 ④ Không có    : [X/10] — có còn pattern nào trong [EXAMPLE ANALYSIS]④ sót lại không?
 ⑤ Kết nối câu : [X/10] — mỗi câu trong body có phải là phản ứng cảm xúc với câu trước không, hay đang liệt kê thông tin độc lập?

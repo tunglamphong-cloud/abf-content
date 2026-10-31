@@ -2,7 +2,7 @@
 
 **name:** TikTok-casestudy-workflow
 
-**description:** Quy trình tự động hóa phân tích hồ sơ vay vốn thực tế và sản xuất kịch bản case study viral trên TikTok với độ dài dao động từ 150–300 từ, đúng DNA từng kênh, đã nạp bối cảnh vĩ mô thời điểm vay và che đi thông tin không public.
+**description:** Quy trình tự động hóa phân tích hồ sơ vay vốn thực tế và sản xuất kịch bản case study viral trên TikTok với độ dài theo bảng "Độ Dài Theo Kênh × Format" (`tiktok-script-skill` L3) cho đúng VJ × format, đúng DNA từng kênh, đã nạp bối cảnh vĩ mô thời điểm vay và che đi thông tin không public.
 
 - **Input:** file hồ sơ PDF/audio/image + 4F phân tích + broll (nếu có) + style viết để thực hiện ở bước 5
 - **Output:** script TikTok hoàn chỉnh theo style kênh, công thức content, DNA văn phong.
@@ -16,9 +16,9 @@
 
 - **Bài toán:** Biến hồ sơ vay vốn thô (PDF, ghi âm, ảnh) thành kịch bản TikTok case study viral, đúng style từng kênh, chuẩn DNA văn phong, inject thông tin dynamic theo tháng/quý.
 - **Input:** File sổ đỏ/CIC (PDF/scan), file ghi âm buổi họp case study (audio), ảnh thực tế, broll (nếu có), ghi chú 4F phân tích của user, chọn style kênh, chọn công thức content + tổng hợp các nguồn thông tin liên quan đến case study trong obsidian vault + style viết để thực hiện ở bước 5
-- **Output:** 1 file kịch bản TikTok hoàn chỉnh, gồm hook + body + CTA, tích hợp b-roll note, độ dài 60–180 giây đọc thoại trên Platform: TikTok.
+- **Output:** 1 file kịch bản TikTok hoàn chỉnh, gồm hook + body + CTA, tích hợp b-roll note, độ dài theo bảng "Độ Dài Theo Kênh × Format" (`tiktok-script-skill` L3) cho đúng VJ × format, trên Platform: TikTok.
 - **Hoàn thành khi:** Script đã qua qa-scan 4C pass toàn bộ, thông tin dynamic đã inject, không chứa thông tin không được phép public, không chứa từ cấm và những từ vi phạm chính sách TikTok.
-- **Skills gọi:** [ ....]
+- **Skills gọi:** `[time-builder, macro-context, story-arc, hook-writer, success-framework-scorer, body-writer, cta-writer, title-writer, caption-hashtag-writer, human-authenticity-scorer, broll-mapper, dna-filter, oral-communication-filter, non-public-filter, tiktok-policy-scanner, channel-fit-validator]` — tra nơi định nghĩa trong `.agent/rules/VAULT-STRUCTURE-REF.md` mục Skill Registry
 
 > ⚠️ **QUY TẮC CHẠY TOÀN BỘ WORKFLOW**
 > - Agent phải chạy **lần lượt 10 phase**, step by step, không được nhảy cóc.
@@ -27,6 +27,8 @@
 ---
 
 ## PHASE 0: XÁC NHẬN B-ROLL TRƯỚC KHI CHẠY
+
+> ⚠️ **Phase 0 này KHÔNG bị thay thế bởi Phase 0 của CLAUDE.md.** Chạy ngay sau CLAUDE Phase 0, trước Phase 1 — `broll_mode` là input bắt buộc cho Phase 7.
 
 ### Mục tiêu
 
@@ -181,7 +183,7 @@ Xác định ngay từ đầu user có B-roll sẵn hay không để agent chọ
 ### Mục tiêu
 Gom toàn bộ output từ Phase 1 + Phase 2 + Phase 3 thành 1 khối MD duy nhất trong working memory. Bắt buộc trước khi chọn style và viết kịch bản — tránh tràn context ở các phase sau.
 
-### Không gọi skill — GEMINI tự tổng hợp theo template:
+### Không gọi skill — Claude tự tổng hợp theo template:
 
 ```
 # CONTEXT FILE — [ma-ho-so-an-danh] — [dd/mm/yy]
@@ -323,7 +325,7 @@ Bạn đồng ý với bản đồ này không? Muốn thay đổi style hoặc 
 
 **Bước 5.1** → GỌI: `[hook-writer]` - Viết 3 phiên bản hook khác nhau (số liệu gây sốc / câu hỏi kích thích / tuyên bố đảo ngược kỳ vọng) dựa trên nguồn ở trên, agent chọn 1 phiên bản phù hợp nhất với style kênh đã xác định ở Phase 4.
 
-Mỗi hook: 20–40 từ, đúng xưng hô của kênh, dùng chi tiết thực từ hồ sơ.
+Mỗi hook: câu hook mở đầu ≤10 từ (HARD RULE ① của `tiktok-script-skill`); cả đoạn hook + pull-up 20–40 từ, đúng xưng hô của kênh, dùng chi tiết thực từ hồ sơ.
 
 **Bước 5.2** → GỌI: `[success-framework-scorer]`
 
@@ -332,7 +334,7 @@ Chấm điểm 3 phiên bản hook theo framework SUCCESS (Chip & Dan Heath). Đ
 ### Pass khi
 
 - Có đủ 3 phiên bản hook với 3 patterns KHÁC NHAU
-- Mỗi hook có độ dài 20-40 từ
+- Mỗi hook: câu hook mở đầu ≤10 từ (HARD RULE ① của `tiktok-script-skill`); cả đoạn hook + pull-up 20–40 từ
 - Mỗi hook có lý do hiệu quả rõ ràng
 - success-framework-scorer đã chạy và trả về bảng điểm SUCCESS đầy đủ cho cả 3 hooks
 - 1 recommendation Hook bám vào style kênh và được điểm cao nhất
@@ -341,7 +343,7 @@ Chấm điểm 3 phiên bản hook theo framework SUCCESS (Chip & Dan Heath). Đ
 ### Fail khi và hành động
 
 - 3 hooks dùng cùng 1 pattern → gọi lại hook-writer với yêu cầu buộc đa dạng pattern
-- Tất cả 3 hooks có SUCCESS score < 60% → gọi lại hook-writer viết lại từ đầu, không chọn hook chất lượng thấp
+- Tất cả 3 hooks có SUCCESS score < 4/6 (ngưỡng của `success-framework-scorer`) → gọi lại hook-writer viết lại từ đầu, không chọn hook chất lượng thấp
 
 > ⛔ **BLOCKING RULE - Phase 5 (BẮT BUỘC)**
 > Hook phải pass qua các yêu cầu của phase 5 thì mới được tiến hành tiếp phase 6, trường hợp không pass thì phải thực hiện lại đến khi nào pass thì thôi
@@ -359,7 +361,7 @@ Chấm điểm 3 phiên bản hook theo framework SUCCESS (Chip & Dan Heath). Đ
 1. **CONTEXT FILE** từ Phase 3.5 — nguồn dữ kiện duy nhất, không đọc lại phase cũ
 2. **[CHANNEL STRATEGY]** từ Bước 2.5 — định hướng kênh, chân dung khách hàng, tone tổng thể
 3. **[FORMAT RULE]** từ Bước 2.5 — quy tắc cấu trúc body, CTA, title của format
-4. **[EXAMPLE SCRIPTS] + [EXAMPLE ANALYSIS]** từ Bước 2.5/2.6 — nhại cấu trúc, độ dài, từ đặc trưng; tránh pattern trong ④ "Điều KHÔNG có"
+4. **[EXAMPLE SCRIPTS] + [EXAMPLE ANALYSIS]** từ Bước 2.5/2.6 — nhại cấu trúc, từ đặc trưng (KHÔNG nhại độ dài examples — độ dài theo chuẩn 500–700 từ của `tiktok-script-skill`); tránh pattern trong ④ "Điều KHÔNG có"
 
 > ⚠️ Trước khi gọi bất kỳ skill nào: đọc `[CHANNEL STRATEGY]` + `[EXAMPLE ANALYSIS]` ①②③④⑤⑥ — dùng làm constraint cho toàn bộ phase này.
 > - ⑤ Cách câu kết nối: **mỗi câu phải là phản ứng cảm xúc tự nhiên với câu trước** — không liệt kê thông tin độc lập
@@ -399,7 +401,7 @@ Output: Authenticity Score /100 + danh sách câu/cụm từ cần rewrite.
 
 - Skeleton có đủ tất cả section của công thức được chọn
 - Mỗi section có nội dung cụ thể, không chung chung
-- Thời lượng ước tính (WPM × word count) nằm trong 60–150 giây
+- Tổng Hook + Body + CTA 500–700 từ; thời lượng ước tính (~5 từ/giây) 100–140 giây; mỗi 60–80 từ có 1 câu hỏi/cú lật
 - CTA đúng soft/hard theo DNA kênh
 - Có 3 phiên bản title + 1 recommendation
 - Caption ≤ 50 từ, hashtag 5–10 cái
@@ -473,7 +475,7 @@ Output: Authenticity Score /100 + danh sách câu/cụm từ cần rewrite.
 - Không có câu nào dùng sai xưng hô ("em" / "An Bình" - không phải tên creator)
 - Script đọc tự nhiên, không có cảm giác AI viết hoặc dùng từ quá sách vở
 - CTA phù hợp soft/hard theo DNA kênh
-- Độ dài: 150–300 từ, tùy brief
+- Độ dài: nằm trong khoảng của VJ × format (bảng L3 `tiktok-script-skill`), không phụ thuộc brief
 - Oral-communication Score ≥ 95/100 - không còn flag chưa xử lý
 - Không còn từ nào trong blacklist van-noi-filter sót lại
 - Mọi vấn đề trong script phản ánh đúng severity label từ Phase 1 - không có đoạn nào bị nâng mức
@@ -531,12 +533,12 @@ Quét toàn bộ kịch bản tìm từ cấm + vi phạm chính sách TikTok VN
 
 Chấm điểm tính người lần cuối sau tất cả chỉnh sửa. Output: Authenticity Score /100 + danh sách câu/cụm từ cần sửa (nếu có)
 
-→ **[SIMILARITY SCORE]** — Không cần gọi skill, GEMINI tự chấm dựa trên `[EXAMPLE ANALYSIS]`:
+→ **[SIMILARITY SCORE]** — Không cần gọi skill, Claude tự chấm dựa trên `[EXAMPLE ANALYSIS]`:
 
 ```
 SIMILARITY SCORE
 ① Cấu trúc   : [X/10] — hook/body/CTA có khớp pattern phổ biến ở [EXAMPLE ANALYSIS]② không?
-② Độ dài      : [X/10] — tổng từ số có nằm trong ±20% so với độ dài trung bình examples?
+② Độ dài      : [X/10] — tổng từ số (Hook+Body+CTA) có nằm trong khoảng của VJ × format (bảng L3 `tiktok-script-skill`)?
 ③ Từ đặc trưng: [X/10] — có dùng ≥3 cụm từ từ [EXAMPLE ANALYSIS]③? Liệt kê các cụm đã dùng.
 ④ Không có    : [X/10] — có còn pattern nào trong [EXAMPLE ANALYSIS]④ sót lại không?
 ⑤ Kết nối câu : [X/10] — mỗi câu trong body có phải là phản ứng cảm xúc với câu trước không, hay đang liệt kê thông tin độc lập?

@@ -20,7 +20,7 @@ tags:
 > **Path:** `/abla-script-workflow`
 > **Version:** v1.4
 
-**Description:** Workflow viết kịch bản TikTok "An Bình là ai" cho An Bình Finance. Input: chủ đề hoặc yêu cầu từ user. Output: 1 script 120-200 từ, sẵn sàng quay, đúng giọng nói TikTok tài chính, target 20k+ views.
+**Description:** Workflow viết kịch bản TikTok "An Bình là ai" cho An Bình Finance. Input: chủ đề hoặc yêu cầu từ user. Output: 1 script độ dài theo bảng "Độ Dài Theo Kênh × Format" (`tiktok-script-skill` L3) cho đúng VJ × format, sẵn sàng quay, đúng giọng nói TikTok tài chính, target 20k+ views.
 
 ---
 
@@ -28,9 +28,9 @@ tags:
 
 - **Bài toán:** Viết kịch bản TikTok giới thiệu An Bình Finance theo hướng storytelling — không phải quảng cáo liệt kê tính năng
 - **Input:** Yêu cầu từ user — có thể chỉ là "viết kịch bản mới" hoặc chủ đề cụ thể (vd: "về ân hạn gốc", "dùng case anh Hải")
-- **Output:** 1 script hoàn chỉnh, 120-200 từ, định dạng văn nói tự nhiên 100% tính người, kèm ghi chú `[Công thức: X] [Từ: Y] [Nguyên liệu: Z]`
+- **Output:** 1 script hoàn chỉnh, độ dài theo bảng "Độ Dài Theo Kênh × Format" (`tiktok-script-skill` L3) cho đúng VJ × format, định dạng văn nói tự nhiên 100% tính người, kèm ghi chú `[Công thức: X] [Từ: Y] [Nguyên liệu: Z]`
 - **Hoàn thành khi:** Script pass toàn bộ 4C Check ở Phase 3, đọc to lên nghe như người thật đang nói chuyện — không có dấu hiệu AI viết
-- **Skills gọi:** `[15-content-formulas, viral-pattern-analysis, human-voice-filter]`
+- **Skills gọi:** `[tiktok-script-skill, human-voice-filter]` (công thức content: `tiktok-script-skill` L3 "Công Thức Theo Funnel" + `CC-ContentCreator/CC-01-Atomic/L2-KienThucNghe/2026-04-10-the-kenh-tai-chinh-l2-content-angles.md`)
 
 ---
 
@@ -140,19 +140,19 @@ Anh/chị chọn idea nào, hoặc muốn điều chỉnh gì không?
 
 ### Nguồn
 - Idea đã chọn từ Phase 1
-- `references/15-content-formulas.md`
-- `references/viral-pattern-analysis.md`
+- Công thức content: `tiktok-script-skill` L3 "Công Thức Theo Funnel" + `CC-ContentCreator/CC-01-Atomic/L2-KienThucNghe/2026-04-10-the-kenh-tai-chinh-l2-content-angles.md`
+- Viral pattern: `CC-ContentCreator/CC-01-Atomic/L3-KienThucDacThu/2026-04-10-research-tiktok-mau-huyen-le-p1.md`
 - Bảng số liệu được phép dùng (xem bên dưới)
 
 ### Skill
-→ GỌI: `[15-content-formulas, viral-pattern-analysis]` — chọn combo công thức phù hợp với idea
+→ GỌI: `[tiktok-script-skill]` — đọc L3 "Công Thức Theo Funnel" + nguồn công thức ở trên, chọn combo công thức phù hợp với idea
 → GỌI: `[human-voice-filter]` — lọc ngôn ngữ AI, đảm bảo 100% tính người
 
 ### Lớp 1 — Viết theo công thức
 
 Có thể kết hợp 1-3 công thức. Thường phân vai: 1 công thức cho hook / 1 cho thân bài / 1 cho kết-CTA. Tối đa 3 — quá 3 là đang nhồi quá nhiều.
 
-*(Tham khảo bảng chọn công thức nhanh, 5 quy tắc cứng, và bảng số liệu được phép dùng trong file gốc trên Lark Docs)*
+*(Tham khảo bảng chọn công thức nhanh, 5 quy tắc cứng, và bảng số liệu được phép dùng trong file gốc trên Lark Docs)* → Nếu nội dung này chưa có trong vault: hỏi VJ dán vào, KHÔNG tự bịa.
 
 > **Tuyệt đối không nói:** cam kết "chắc chắn duyệt" / "100%" / bất kỳ con số nào không có trong profile
 
@@ -160,7 +160,7 @@ Có thể kết hợp 1-3 công thức. Thường phân vai: 1 công thức cho 
 
 Sau khi có bản draft script, chạy toàn bộ script qua bộ lọc sau trước khi output ra cho user.
 
-*(Tham khảo danh sách dấu hiệu AI cần loại bỏ trong file gốc trên Lark Docs)*
+*(Tham khảo danh sách dấu hiệu AI cần loại bỏ trong file gốc trên Lark Docs)* → Nếu nội dung này chưa có trong vault: hỏi VJ dán vào, KHÔNG tự bịa.
 
 **Chuẩn giọng đúng của An Bình Finance:**
 - Nói chuyện như đang tư vấn 1-1 — không phải đứng trên sân khấu phát biểu
@@ -196,7 +196,7 @@ Sau khi có bản draft script, chạy toàn bộ script qua bộ lọc sau trư
 Kiểm tra toàn bộ script lần cuối trước khi ship. **Đọc to lên 1 lần** — nếu có đoạn nào đọc lên thấy vấp hoặc cứng, đó là đoạn cần sửa.
 
 ### Nguồn
-→ GỌI: `[ablaai-script]` — chạy 4C Check
+→ Không gọi skill — Claude tự chạy 4C Check bên dưới (thay cho `[ablaai-script]` cũ, chưa từng có file)
 
 ### 4C Check cho workflow này
 
@@ -208,7 +208,7 @@ Kiểm tra toàn bộ script lần cuối trước khi ship. **Đọc to lên 1 
 **Completeness — Đủ không?**
 - [ ] Có đủ: Hook → Pain → Insight/Bằng chứng → Định vị An Bình → CTA
 - [ ] Có ít nhất 1 con số cụ thể
-- [ ] Độ dài 120-200 từ
+- [ ] Độ dài 500–700 từ (~100–140s), mỗi 60–80 từ có 1 câu hỏi/cú lật
 
 **Context-fit — Đúng ngữ cảnh không?**
 - [ ] Giọng văn 100% tự nhiên — đọc to lên không có câu nào nghe như AI viết
@@ -229,7 +229,7 @@ Kiểm tra toàn bộ script lần cuối trước khi ship. **Đọc to lên 1 
 
 - **File:** Script hoàn chỉnh kèm dòng ghi chú `[Công thức: X] [Từ: Y] [Nguyên liệu: Z]`
 - **Lưu:** Trả về trực tiếp trong conversation; lưu vào `examples/` nếu đây là script mẫu mới cần giữ lại
-- **Feed vault:** Nếu script dùng góc tiếp cận chưa từng thử → ghi chú để cập nhật `references/viral-pattern-analysis.md`
+- **Feed vault:** Nếu script dùng góc tiếp cận chưa từng thử → ghi chú Feed Loop vào `VJ/VJ-AnBinh/VJ-01-Atomic/insight/insight-[date]-[topic].md`
 
 ---
 

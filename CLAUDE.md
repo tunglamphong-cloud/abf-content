@@ -293,6 +293,7 @@ Chi phí + điều kiện   | ✅ / ❌
 
 **⚠️ PHASE 0 CÓ 6 BƯỚC. SAU BƯỚC 6 → LOAD WORKFLOW.**
 **⚠️ PHASE 0 LÀ CỦA CLAUDE — khi load workflow, BỎ QUA Phase 0 của workflow, bắt đầu từ Phase 1.**
+**⚠️ NGOẠI LỆ — Case Study:** Phase 0 của workflow Case Study (xác nhận B-roll → `broll_mode` A/B) VẪN PHẢI CHẠY ngay trước Phase 1 — Phase 7 phụ thuộc vào nó.
 
 **⛔ QUY TẮC CHẠY PHASE 0 — ĐỌC TRƯỚC KHI BẮT ĐẦU:**
 - Chạy **LIÊN TỤC** từ Bước 0 → Bước 6. KHÔNG dừng giữa chừng để hỏi VJ, KHÔNG chờ xác nhận.
@@ -430,6 +431,22 @@ GET https://api.github.com/repos/gracenguyenai-boop/abf-vault/contents/VJ/[VJ-fo
 ⏱️ Timeout 30 giây tổng. File nào fetch thất bại → bỏ qua, tiếp tục.
 ⛔ Folder trống hoặc không tồn tại → báo VJ thêm scripts mẫu, tiếp tục Phase 0 không có examples.
 
+**→ Load benchmark SocialLens (BẮT BUỘC — mẫu có số liệu view/lưu thật, dùng để học theo):**
+
+| VJ | Note phân tích → nhãn `[BENCHMARK]` | Folder mẫu → nhãn `[BENCHMARK SAMPLES]` | Học xưng hô? |
+|---|---|---|---|
+| An Bình | `VJ/VJ-AnBinh/VJ-01-Atomic/framework/2026-10-30-benchmark-abf-ho-tro-vay-news-case.md` (+ News: `…/2026-10-30-benchmark-huyen-chung-khoan-news.md`) | `abf-ho-tro-vay-ngan-hang/` (+ News: `huyen-chung-khoan-101/`) | ✅ ABF · ❌ Huyền |
+| Khang | `VJ/VJ-Khang/VJ-01-Atomic/framework/2026-10-30-benchmark-thuy-lam-vay-von-cho-khang.md` | `thuy-lam-vay-von/` | ❌ |
+| Đạt | `VJ/VJ-Dat/VJ-01-Atomic/framework/2026-10-30-benchmark-thuy-lam-vay-von-cho-dat.md` (+ mục 0–7 note Khang) | `thuy-lam-vay-von/` | ❌ |
+| Thuỷ | `VJ/VJ-Khang/VJ-01-Atomic/framework/2026-10-30-benchmark-thuy-lam-vay-von-cho-khang.md` (mục 0–7) | `thuy-lam-vay-von/` | ✅ (cùng giọng "em Thủy") |
+
+Folder mẫu nằm ở `VJ/_benchmark-sociallens/`. Cách lấy:
+1. Fetch note `[BENCHMARK]` → đọc mục độ dài, hook thắng, câu hỏi viewer, lập luận.
+2. Contents API lấy danh sách folder mẫu → đọc frontmatter → giữ file có `workflow-tags` khớp workflow; ưu tiên file có `format-suggest` khớp format → sắp theo `views` giảm dần → lấy **tối đa 4** → `[BENCHMARK SAMPLES]`.
+3. Học: hook, cách lập luận, nhịp câu hỏi/cú lật, cách kết. ❌ Cột "Học xưng hô" = ❌ → KHÔNG copy xưng hô / câu chữ — xưng hô luôn theo `[FORMAT RULE]`.
+
+→ Output: `📊 Đã load [BENCHMARK] + [n] mẫu SocialLens (view cao nhất: [X]).`
+
 ---
 
 ### Bước 2.6 — Phân tích examples (Pattern Extraction)
@@ -448,6 +465,8 @@ Chạy ngay sau Bước 2.5. Agent tự phân tích `[EXAMPLE SCRIPTS]` đã loa
    ví dụ: "Câu 1 throw người xem vào tình huống → Câu 2 là cảm xúc/phản ứng tự nhiên của người xem trước tình huống đó → Câu 3 lật ngược hoặc đào sâu hơn → không có câu nào giải thích lại câu trước"]
 ⑥ Hành trình cảm xúc: [mô tả cung bậc cảm xúc từ đầu đến cuối script — ví dụ:
    "Mở = bất ngờ/tò mò → Giữa = nhận ra mình đang/đã mắc lỗi này → Đỉnh = khoảnh khắc 'ồ ra là vậy' → Cuối = muốn làm gì đó ngay"]
+⑦ Bài học từ [BENCHMARK SAMPLES]: [2 bài view/lưu cao nhất: kiểu hook · số từ · câu hỏi cho viewer · cách kết — và vì sao thắng (theo note [BENCHMARK])]
+⑧ Độ dài mục tiêu  : [khoảng + đích của VJ × format từ bảng `tiktok-script-skill` L3 "Độ Dài Theo Kênh × Format"] — so với ① và số từ của bài thắng ở ⑦
 ```
 
 > ⚠️ ⑤ và ⑥ là 2 pattern quan trọng nhất — dùng để viết câu tiếp theo dựa trên cảm xúc câu trước, không phải dựa trên checklist cấu trúc.
@@ -520,6 +539,7 @@ Bước 2 — Vault search done    : ✅ / ⚠️
 Bước 2.5 — [CHANNEL STRATEGY] : ✅ / ❌ CHƯA CHẠY → DỪNG, chạy lại ngay
           — [FORMAT RULE]      : ✅ / ❌ CHƯA CHẠY → DỪNG, chạy lại ngay
           — [EXAMPLE SCRIPTS]  : ✅ ([n] scripts) / ❌ CHƯA CHẠY → DỪNG
+          — [BENCHMARK]        : ✅ ([n] mẫu SocialLens) / ❌ CHƯA CHẠY → DỪNG
 Bước 2.6 — [EXAMPLE ANALYSIS] : ✅ / ❌ CHƯA CHẠY → DỪNG, chạy lại ngay
 Bước 3 — RAW INPUT SUMMARY    : ✅ / ⚠️
 Bước 4 — Frameworks done      : ✅ / ⚠️
@@ -558,9 +578,9 @@ https://raw.githubusercontent.com/gracenguyenai-boop/abf-vault/main/.agent/workf
 
 **⛔ SAU KHI LOAD WORKFLOW:**
 1. Đọc TOÀN BỘ workflow file trước khi làm bất cứ điều gì
-2. BỎ QUA Phase 0 của workflow — CLAUDE Phase 0 đã thay thế
+2. BỎ QUA Phase 0 của workflow — CLAUDE Phase 0 đã thay thế (**trừ Case Study:** vẫn hỏi câu B-roll của Phase 0 workflow trước Phase 1)
 3. Chạy TỪNG PHASE theo thứ tự (Phase 1 → 2 → ... → N)
-4. Khi workflow gọi `[skill-name]` → fetch skill từ vault theo path trong VAULT-STRUCTURE-REF.md
+4. Khi workflow gọi `[skill-name]` → tra mục "Skills — TikTok Script Workflow" trong VAULT-STRUCTURE-REF.md (skill có file → fetch đọc trước; skill INLINE → làm đúng mô tả tại bước GỌI)
 5. Báo cáo kết quả mỗi Phase trước khi chuyển tiếp
 6. **CẤM**: Viết script/output trực tiếp bỏ qua phases
 

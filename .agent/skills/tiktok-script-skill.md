@@ -31,7 +31,7 @@ cột nội dung trên platform TikTok.
 ### Đầu ra được xem là hoàn thành khi
 - Script pass 6 nguyên tắc bất biến
 - Có đủ 4 phần: HOOK + BODY (3 micro-hooks) + CTA
-- Đọc to trong 60-105 giây
+- Độ dài đúng khoảng của VJ × format — xem bảng "Độ Dài Theo Kênh × Format" ở L3
 - Không có label, timestamp, hay ghi chú kỹ thuật
 
 ---
@@ -86,6 +86,48 @@ Câu chuyển đoạn phải ngắn, tạo momentum.
 ---
 
 ## L3 — EXECUTION
+
+### Độ Dài Theo Kênh × Format (cập nhật 2026-10-30 — thay chuẩn chung 500–700 từ)
+
+> ⛔ **Không còn 1 độ dài chung.** Chuẩn cũ "500–700 từ cho mọi format" lấy từ kênh Huyền (chứng khoán, phân tích vĩ mô) — khác ngách, khác format. Dữ liệu SocialLens của chính ngách vay vốn cho thấy bài viral **ngắn hơn trung vị**: ABF top 300–330 từ, Thuỷ #29 (285K view) chỉ 191 từ / 40s, mẹo Nhân BĐS 380–420 từ.
+> **Đây là bảng nguồn duy nhất** — workflow, REGISTRY, VAULT-STRUCTURE-REF chỉ trỏ về đây, không ghi số riêng.
+
+Căn cứ: trung vị kịch bản thật trong `VJ/[VJ]/scripts/[format]/` + mẫu SocialLens trong `VJ/_benchmark-sociallens/` (tốc độ đọc đo được ~4,7 tiếng/giây).
+
+| Kênh | Format | Khoảng (tổng thoại) | Đích | ~Thời lượng | Căn cứ |
+|---|---|---|---|---|---|
+| An Bình | talking-head · Case Study | 300–450 | ~370 | 65–95s | ABF case trung vị 362, top 300–330 · VJ 376 |
+| An Bình | talking-head · News / KTVV / ABLA | 350–550 | ~450 | 75–115s | ABF news 378 · Huyền (news nhiều lớp) 582 |
+| An Bình | tips-nhanh | 250–400 | ~320 | 55–85s | ABF tips 312 |
+| Khang | talking-head | 300–480 | ~390 | 65–100s | VJ 394 |
+| Khang | tips-nhanh | 280–450 | ~380 | 60–95s | VJ 454 (lệch bởi 1 bài 868) |
+| Khang | giai-quyet-thuc-dia | 230–350 | ~280 | 50–75s | VJ 278 |
+| Khang | selfie | 250–420 | ~340 | 55–90s | VJ 350 |
+| Khang | tu-van-hoi-thoai | 260–450 | ~350 | 55–95s | VJ 352 |
+| Đạt | talking-head | 220–380 | ~300 | 50–85s | VJ 292 |
+| Đạt | tips-nhanh | 200–350 | ~280 | 45–75s | VJ 284 |
+| Đạt | trong-xe-o-to | 190–280 | ~240 | 40–60s | VJ 238 |
+| Đạt | nghe-dien-thoai | 200–370 | ~280 | 45–80s | VJ 281 (2 bài) |
+| Đạt | cam-giay-to | 130–220 | ~170 | 30–50s | VJ 159 (1 bài — ít mẫu) |
+| Thuỷ | talking-head | 250–420 | ~320 | 55–90s | VJ 324 · SocialLens Thuỷ 316 |
+| Thuỷ | tips-nhanh | 180–280 | ~230 | 40–60s | VJ 241 · #29 viral 191 từ |
+| Thuỷ | dong-vai | 300–500 | ~400 | 65–105s | VJ 411 · đóng vai viral 370–410 |
+
+Nhân BĐS (ngoài 4 kênh chính): mẹo ~400 từ · explainer 450–650 · tour khu vực ≤800 — xem `VJ/VJ-NhanBDS/VJ-01-Atomic/framework/2026-10-30-benchmark-nhan-bds-review.md`.
+
+**Chia phần (áp cho mọi dòng trên):**
+
+| Phần | Số từ |
+|---|---|
+| Hook (câu mở đầu) | ≤10 từ |
+| Hook + Pull-up | 15–40 từ |
+| CTA | 10–50 từ — hoặc **0** nếu `_RULE` của format cho phép kết không CTA |
+| Body | phần còn lại của khoảng tổng |
+
+**Nhịp giữ người xem:** cứ mỗi 60–80 từ có 1 câu hỏi cho người xem HOẶC 1 cú lật (twist / số liệu mới / "nhưng mà…"); tối thiểu 3 nhịp = 3 micro-hook.
+- Ưu tiên **đích**, không cố chạm trần. Vượt trần → cắt nhánh phụ hoặc tách thành video sau; dưới sàn → thêm 1 lớp (ví dụ thật, số liệu, cú lật), không thêm câu đệm.
+- Bài mẫu viral cùng format ngắn hơn đích → được phép viết về sát sàn.
+- Đếm từ = đếm tiếng (âm tiết) trong phần thoại, không tính tiêu đề, b-roll note, caption.
 
 ### Cấu Trúc Script Bắt Buộc
 
@@ -164,7 +206,7 @@ Câu chuyển đoạn phải ngắn, tạo momentum.
 ❌ "[00:30]" — không timestamp
 ❌ Số liệu không quy đổi: "GDP tăng 6.8%" → thiếu "tức là..."
 ❌ "Em nghĩ là..." trong T3 → phải "Sự thật là..."
-❌ Script >105 giây — cắt, không nhồi
+❌ Script vượt trần khoảng của format — cắt nhánh phụ, không nhồi; dưới sàn — thêm lớp lập luận, không thêm câu đệm
 ❌ CTA chỉ 1 tầng — phải đủ 3 tầng
 ❌ Transition >8 từ → cắt ngắn lại
 ```
@@ -184,7 +226,7 @@ Câu chuyển đoạn phải ngắn, tạo momentum.
 | 5 | Có ít nhất 1 ẩn dụ đời thường | [ ] |
 | 6 | Transition mappers ≤8 từ | [ ] |
 | 7 | CTA có đủ 3 tầng | [ ] |
-| 8 | Đọc to trong 60-105 giây | [ ] |
+| 8 | Tổng từ nằm trong khoảng của VJ × format (bảng L3), mỗi 60–80 từ có 1 câu hỏi/cú lật | [ ] |
 | 9 | Không có label, timestamp, ghi chú kỹ thuật | [ ] |
 | 10 | Xưng hô nhất quán (em/anh chị hoặc mình/bạn) | [ ] |
 
@@ -208,12 +250,12 @@ Bất kỳ tiêu chí nào fail → fix trước khi ship.
 - [ ] Tone đúng với trụ cột (T1/T2/T3/T4)
 
 #### Consequence
-- [ ] Độ dài 60-105 giây khi đọc to
+- [ ] Độ dài nằm trong khoảng của VJ × format (bảng L3)
 - [ ] Không có thông tin chưa verify
 
 ### Edge Cases
-- Script quá dài (>105 giây): cắt body, giữ hook và CTA
-- Script quá ngắn (<60 giây): thêm ví dụ hoặc data point
+- Script vượt trần khoảng của format: cắt nhánh phụ trong body, giữ hook, các cú lật và CTA
+- Script dưới sàn khoảng của format: thêm 1 lớp lập luận — ví dụ thực tế, data point, hoặc câu hỏi/cú lật mới; KHÔNG kéo dài bằng câu đệm
 - Thiếu ẩn dụ: hỏi "Điều này giống với [X trong đời thường] thế nào?"
 
 ---
@@ -225,7 +267,7 @@ Bất kỳ tiêu chí nào fail → fix trước khi ship.
 ### Gotchas đã gặp
 - VJ hay quên quy đổi số liệu → luôn check tiêu chí #3 trước
 - T3 hay thiếu pull-up → check tiêu chí #2 đặc biệt cho T3
-- Script hay >105 giây → đặt timer đọc to trước khi ship
+- 2026-10-30: bỏ chuẩn chung 500–700 từ — ép mọi format lên 600 từ làm tips/trong-xe/cầm-giấy-tờ bị độn. Độ dài lấy theo bảng VJ × format, check nhịp "mỗi 60–80 từ 1 câu hỏi/cú lật" và đọc to bấm giờ trước khi ship
 
 ### Cách cập nhật skill này
 - Script fail nhiều ở tiêu chí nào → update anti-patterns trong L3

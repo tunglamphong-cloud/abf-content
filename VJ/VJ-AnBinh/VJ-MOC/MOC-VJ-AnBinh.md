@@ -149,6 +149,17 @@ Feed Loop     → VJ-01-Atomic/insight/insight-[date]-[topic].md
 
 ---
 
+## Benchmark — Kịch bản mẫu kênh tham chiếu (SocialLens 2026-10-30)
+
+> Đọc sau `_RULE`, trước khi viết hook. Lời thoại mẫu: [[MOC-Benchmark-SocialLens]]
+
+| Note | Dùng cho | Mô tả |
+|---|---|---|
+| [[VJ-AnBinh/VJ-01-Atomic/framework/2026-10-30-benchmark-abf-ho-tro-vay-news-case]] | News + Case Study | Kênh ABF 41 bài — hook rủi ro số đông, 300–380 từ, CTA theo dạng |
+| [[VJ-AnBinh/VJ-01-Atomic/framework/2026-10-30-benchmark-huyen-chung-khoan-news]] | News Viral | Huyền 90 bài — hook nối 2 sự kiện, ẩn dụ đời thường, series |
+
+---
+
 ## Sprint Log & Scripts
 
 - [[VJ-01-Atomic/sprint-log]] — Log sprint theo tuần

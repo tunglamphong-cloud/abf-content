@@ -16,3 +16,9 @@
 
 # Agent cache (nếu có)
 .agent/cache/
+
+# Output local của VJ (CLAUDE.md Quy tắc 6 — không đẩy lên GitHub)
+outputs/
+
+# Claude Code local settings (per-machine)
+.claude/settings.local.json

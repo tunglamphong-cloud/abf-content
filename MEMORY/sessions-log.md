@@ -96,3 +96,10 @@
 - Inbox: TD-00-Inbox/2026-05-22-raw-vi-mo-kinh-te-abf
 - Domains: TC(58), BDS(16), CS(19), CK(1)
 - MOC updated: MOC-TraDa.md + MOC-MASTER.md
+
+## 2026-10-30 Atomize: 4 báo cáo SocialLens TikTok (PDF → markitdown)
+- Branch: VJ | Type: framework (subtype benchmark-sample) ×5 + script-sample ×48 | Conflict: NEW (đã loại bài trùng VJ/*/scripts — ABF 5, Thuỷ 10, Nhân 13)
+- Source: Downloads/SocialLens_TikTok_{HO_TRO_VAY_NGAN_HANG, Thuy_Lam_Vay_Von, Nhan_BDS_Review, Huyen_chung_khoan_101}.pdf
+- Created: VJ/_benchmark-sociallens/ (MOC-Benchmark-SocialLens + 4 folder × 12 bài, voice: external — Bước 2.5 không tự load)
+- Notes: [[2026-10-30-benchmark-abf-ho-tro-vay-news-case]] · [[2026-10-30-benchmark-huyen-chung-khoan-news]] (VJ-AnBinh) · [[2026-10-30-benchmark-thuy-lam-vay-von-cho-khang]] (VJ-Khang) · [[2026-10-30-benchmark-thuy-lam-vay-von-cho-dat]] (VJ-Dat) · [[2026-10-30-benchmark-nhan-bds-review]] (VJ-NhanBDS)
+- MOC updated: MOC-VJ-AnBinh · MOC-VJ-Khang · MOC-VJ-Dat · MOC-VJ-NhanBDS · MOC VJ-Master (Links Nhanh)

@@ -21,7 +21,7 @@ tags:
 > **Path:** `/tiktok-vayvon-script`
 > **Version:** v1.3
 
-**Description:** Input: chủ đề vay vốn/ngân hàng. Output: kịch bản TikTok 60-90 giây dạng kiến thức (điểm mù, tip, quy trình, cảnh báo). Dùng cho kênh TikTok tài chính tiếng Việt.
+**Description:** Input: chủ đề vay vốn/ngân hàng. Output: kịch bản TikTok độ dài theo bảng "Độ Dài Theo Kênh × Format" (`tiktok-script-skill` L3) cho đúng VJ × format dạng kiến thức (điểm mù, tip, quy trình, cảnh báo). Dùng cho kênh TikTok tài chính tiếng Việt.
 
 ---
 
@@ -29,9 +29,9 @@ tags:
 
 - **Bài toán:** Tự động research, phân tích và viết kịch bản TikTok kiến thức vay vốn — thay thế việc người viết tự đi tìm idea thủ công từ mạng xã hội.
 - **Input:** Chủ đề hoặc từ khóa do user cung cấp (ví dụ: "làm sạch hồ sơ trước khi vay", "lãi suất thả nổi", "CIC và điểm tín dụng").
-- **Output:** 1 kịch bản TikTok hoàn chỉnh gồm Hook / Bridge / Thân bài / CTA + gợi ý visual + hashtag. Độ dài thân bài 150-300 từ, tổng thời lượng video 60-90 giây.
+- **Output:** 1 kịch bản TikTok hoàn chỉnh gồm Hook / Bridge / Thân bài / CTA + gợi ý visual + hashtag. Tổng từ theo bảng "Độ Dài Theo Kênh × Format" (`tiktok-script-skill` L3) — An Bình talking-head 350–550, tips-nhanh 250–400.
 - **Hoàn thành khi:** Kịch bản có đủ 4 phần, hook kích hoạt ít nhất 1 trigger tâm lý, thân bài có ít nhất 1 con số hoặc ví dụ cụ thể, pass toàn bộ 4C Check.
-- **Skills gọi:** `[tiktok-viral-hook, tiktok-body-writer, tiktok-cta-writer, human-voice]`
+- **Skills gọi:** `[tiktok-viral-hook, tiktok-body-writer, tiktok-cta-writer, human-voice]` — cả 4 là alias của `.agent/skills/tiktok-script-skill.md` (= hook-writer / body-writer / cta-writer / human-voice-writer, xem Skill Registry trong VAULT-STRUCTURE-REF)
 - **MCP:** Perplexity (Phase 1 — search & research)
 
 ---
@@ -61,7 +61,7 @@ tags:
 
 ### 5 loại nội dung cần tìm, theo thứ tự ưu tiên
 
-*(Tham khảo bảng chi tiết trong file gốc trên Lark Docs)*
+*(Tham khảo bảng chi tiết trong file gốc trên Lark Docs)* → Nếu nội dung này chưa có trong vault: hỏi VJ dán vào, KHÔNG tự bịa.
 
 ### Cụm từ search theo loại nội dung
 - **Điểm mù:** "[chủ đề] điều ngân hàng không nói" / "sai lầm khi vay [chủ đề]" / "[chủ đề] ít người biết"
@@ -103,7 +103,7 @@ Angle         : [câu mô tả góc tiếp cận - xem bảng dưới]
 Hệ quả nếu bỏ qua: [điều xảy ra nếu người xem không biết thông tin này]
 ```
 
-*(Tham khảo bảng chọn angle theo loại nội dung trong file gốc trên Lark Docs)*
+*(Tham khảo bảng chọn angle theo loại nội dung trong file gốc trên Lark Docs)* → Nếu nội dung này chưa có trong vault: hỏi VJ dán vào, KHÔNG tự bịa.
 
 ### Pass khi
 - Idea card đã điền đủ 6 trường
@@ -119,7 +119,7 @@ Hệ quả nếu bỏ qua: [điều xảy ra nếu người xem không biết th
 ## PHASE 3: VIẾT KỊCH BẢN — ÁP DỤNG CÔNG THỨC CONTENT
 
 ### Mục tiêu
-Đến cuối phase này, agent phải có kịch bản hoàn chỉnh đủ 4 phần: Hook / Bridge / Thân bài / CTA — đúng tone giọng kênh, đúng độ dài video 60-90 giây.
+Đến cuối phase này, agent phải có kịch bản hoàn chỉnh đủ 4 phần: Hook / Bridge / Thân bài / CTA — đúng tone giọng kênh, đúng độ dài 500–700 từ (~100–140 giây).
 
 ### Nguồn
 - Idea card từ Phase 2
@@ -139,7 +139,7 @@ Skill xuất 3 biến thể hook. Agent chọn 1 biến thể tốt nhất để
 
 *(Tham khảo bảng định hướng công thức hook theo loại nội dung trong file gốc)*
 
-### PHẦN 2 — BRIDGE (5-10 giây)
+### PHẦN 2 — BRIDGE (5-12 giây)
 
 Viết trực tiếp, không cần gọi skill. Câu xác nhận rằng video sẽ giải quyết đúng vấn đề người xem vừa thấy ở hook. Ví dụ:
 
@@ -147,7 +147,7 @@ Viết trực tiếp, không cần gọi skill. Câu xác nhận rằng video s�
 - "Đây là [số] điều mà nhân viên ngân hàng không bao giờ chủ động nói với anh/chị."
 - "Em sẽ giải thích đúng [số bước] mà anh/chị cần nắm để [kết quả cụ thể]."
 
-### PHẦN 3 — THÂN BÀI (10-75 giây)
+### PHẦN 3 — THÂN BÀI (12-125 giây · 420–580 từ · mỗi 60–80 từ 1 câu hỏi/cú lật)
 
 → GỌI: `[tiktok-body-writer]`
 
@@ -193,7 +193,7 @@ Dùng khi: Case study, tình huống thực tế.
 [Bài học] → "Từ câu chuyện này, điều anh/chị cần ghi nhớ là..."
 ```
 
-### PHẦN 4 — CTA (75-90 giây)
+### PHẦN 4 — CTA (125-140 giây)
 
 → GỌI: `[tiktok-cta-writer]`
 
@@ -211,14 +211,14 @@ Skill chọn kiểu CTA phù hợp nhất với nội dung — không copy-paste
 
 ### Pass khi
 - Hook pass checklist `[tiktok-viral-hook]`: ≥1 trigger tâm lý, ≥1 chi tiết cụ thể, có khoảng trống, không giải thích sớm
-- Thân bài có ít nhất 1 con số hoặc ví dụ cụ thể có thể kiểm chứng, 150-250 từ
+- Thân bài có ít nhất 1 con số hoặc ví dụ cụ thể có thể kiểm chứng, 420–580 từ; tổng script 500–700 từ
 - CTA khớp với nội dung — không phải CTA generic copy-paste
 - Sau khi `[human-voice]` chạy xong: đọc to kịch bản nghe tự nhiên, không nghe như văn viết
 
 ### Fail thì
 - Hook không đủ mạnh → gọi lại `[tiktok-viral-hook]` với biến thể khác, không tự sửa tay
 - Thân bài không có con số cụ thể → quay lại Phase 1, search thêm bằng Perplexity
-- Vượt quá 300 từ → cắt bớt trước khi đưa vào `[human-voice]`, phần dư làm idea card video tiếp theo
+- Vượt trần khoảng của format → cắt bớt trước khi đưa vào `[human-voice]`, phần dư làm idea card video tiếp theo
 - Sau `[human-voice]` vẫn còn câu nghe gượng → chạy lại `[human-voice]` với đoạn cụ thể đó, không chạy lại toàn bộ
 
 ---

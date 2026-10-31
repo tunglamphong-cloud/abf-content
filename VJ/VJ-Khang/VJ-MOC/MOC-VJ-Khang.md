@@ -216,6 +216,16 @@ Feed Loop     → VJ-01-Atomic/insight/insight-[date]-[case].md
 | [[VJ-Khang/scripts/2026-05-23-chuyen-19-ty-sacombank-lay-4-ty-tai-vpbank-ch]] | Chuyển 19 tỷ Sacombank lấy 4 tỷ VPBank |
 | [[VJ-Khang/scripts/2026-05-23-seabank-mat-tham-quyen-tu-choi-duyet-them-du]] | SeaBank mất thẩm quyền, từ chối duyệt thêm |
 
+## Benchmark — Kịch bản mẫu kênh tham chiếu (SocialLens 2026-10-30)
+
+| Note | Dùng cho | Mô tả |
+|---|---|---|
+| [[VJ-Khang/VJ-01-Atomic/framework/2026-10-30-benchmark-thuy-lam-vay-von-cho-khang]] | Case Study + News | Thuỷ Làm Vay Vốn 31 bài — rào cản đánh số, đóng vai, map theo 6 format Khang |
+
+→ Lời thoại mẫu: [[MOC-Benchmark-SocialLens]]
+
+---
+
 ## Inbox → `VJ-00-Inbox/` | Templates: `VJ/_templates/`
 
 ---

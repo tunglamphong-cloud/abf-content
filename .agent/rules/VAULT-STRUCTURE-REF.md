@@ -221,6 +221,21 @@ File raw vào → INTENT synthesis → Branch match (JD-based) → Type match
 
 ---
 
+## Skill: Content Brainstorm
+
+**Khi nào dùng:** VJ có chủ đề nhưng chưa rõ nói gì / nói với ai / đứng về phía nào — chạy TRƯỚC bootstrap viết script.
+
+**Skill file:** `.agent/skills/content-brainstorm.md` (Claude Code: `/abf-brainstorm`)
+
+**Flow tóm tắt:**
+```
+Chủ đề → Bước 0 rút gọn (memory + MOC + chân dung KH) → Research internet
+→ CONCEPT CARD → 10 câu hỏi (5W1H · 5WHY · PESTEL · Stakeholder · Six Hats · Inversion · STEPPS/3Us)
+→ BRAINSTORM BRIEF → lưu outputs/brainstorm/ (hỏi trước) → bàn giao workflow viết script
+```
+
+---
+
 ## Skills — TikTok Script Workflow
 
 > ⚠️ Khi workflow gọi `[skill-name]` → fetch đúng file skill dưới đây bằng [crawler]/WebFetch.
@@ -236,6 +251,35 @@ File raw vào → INTENT synthesis → Branch match (JD-based) → Type match
 | `[human-voice-writer]` | `.agent/skills/tiktok-script-skill.md` | Chuyển văn viết → văn nói — đọc L2 "Nguyên Tắc Bất Biến" |
 | `[body-writer]` | `.agent/skills/tiktok-script-skill.md` | Viết body — đọc L3 "Đặc Thù Từng Trụ Cột" |
 | `[cta-writer]` | `.agent/skills/tiktok-script-skill.md` | Viết CTA — đọc L2 "CTA 3 Tầng" |
+| `[tiktok-viral-hook]` (KTVV) | `.agent/skills/tiktok-script-skill.md` | Alias của `[hook-writer]` |
+| `[tiktok-body-writer]` (KTVV) | `.agent/skills/tiktok-script-skill.md` | Alias của `[body-writer]` |
+| `[tiktok-cta-writer]` (KTVV) | `.agent/skills/tiktok-script-skill.md` | Alias của `[cta-writer]` |
+| `[human-voice]` (KTVV) | `.agent/skills/tiktok-script-skill.md` | Alias của `[human-voice-writer]` |
+| `[human-voice-filter]` (ABLA) | ABLA Phase 2 "Lớp 2" + `tiktok-script-skill.md` | Chuẩn giọng An Bình inline + L2 "Nguyên Tắc Bất Biến" + L3 "Anti-Patterns" |
+| `[oral-communication-filter]` (Case P8) | `.agent/skills/tiktok-script-skill.md` | = `[human-voice-writer]` + mô tả inline Case Phase 8 |
+| `[human-authenticity-scorer]` | `.agent/skills/tiktok-script-skill.md` | L4 "10 Tiêu Chí Checklist" + mô tả inline (Score /100) |
+| `[tiktok-policy-scanner]` | `CC-ContentCreator/CC-01-Atomic/L3-KienThucDacThu/2026-04-18-tu-cam-tiktok-tai-chinh-do-manh.md` | Danh sách từ cấm TikTok tài chính + mô tả inline |
+| `[channel-fit-validator]` | `VJ/VJ-[tên]/VJ-01-Atomic/strategy/` (= `[CHANNEL STRATEGY]`) + `VJ/VJ-[tên]/VJ-MOC/MOC-VJ-[tên].md` | Fit Score /100 theo mô tả inline |
+| `[dna-filter]` (Case P8) | `VJ/VJ-[tên]/VJ-MOC/MOC-VJ-[tên].md` | DNA kênh + mô tả inline |
+| `[macro-context]` (Case P2) | `TD-TraDa/TD-01-Atomic/L3-KienThucDacThu/TC/` + `/BDS/` | Vĩ mô thời điểm vay |
+| `[ethos-credibility-analyzer]` (News 1.3) | `TD-TraDa/TD-01-Atomic/L1-Framework/` | Uy tín nguồn |
+| `[stakeholder-impact-mapper]` (News 1.5) | `TD-TraDa/TD-01-Atomic/L3-KienThucDacThu/TC/` | Tác động ngân hàng / người vay |
+| `[viewer-sentiment-analysis]` (News 2.1) | `TD-TraDa/TD-01-Atomic/L4-PDCA/` | Viewer sentiment |
+
+**Skill INLINE** (không có file — làm đúng mô tả tại bước `GỌI` trong workflow, không tự bịa thêm):
+- News: `news-context-synthesizer` (1.1) · `event-timeline-builder` (1.2) · `root-cause-analyzer` (1.4) · `historical-comparator` (1.6) · `synthesizing-viewpoints` (1.7) · `forecast-synthesizer` (1.8) · `angle-generator` (2.2) · `angle-scorer` (2.3)
+- Case Study: `time-builder` (P2) · `story-arc` (P3) · `broll-mapper` (P7) · `non-public-filter` (P9)
+- Chung: `title-writer` · `caption-hashtag-writer`
+
+**Không phải skill:** `[ma-ho-so-an-danh]`, `[topic-slug]` — placeholder điền tên.
+
+**Đã gỡ (2026-10-30):** `[ablaai-script]` → Claude tự chạy 4C Check ABLA P3 · `[15-content-formulas]`, `[viral-pattern-analysis]` (`references/*.md` không tồn tại) → dùng `tiktok-script-skill` L3 "Công Thức Theo Funnel" + `CC-…/L2-KienThucNghe/2026-04-10-the-kenh-tai-chinh-l2-content-angles.md`.
+
+**Còn mở:** các chỗ "file gốc trên Lark Docs" (ABLA P2 ×2, KTVV P1/P2) — nội dung chưa đưa vào vault; agent phải hỏi VJ dán vào.
+
+> **Hook length (đã thống nhất 2026-10-30):** câu hook mở đầu ≤10 từ (HARD RULE); cả đoạn hook + pull-up 20–40 từ. Ngưỡng SUCCESS: ≥4/6.
+>
+> **Script length (cập nhật 2026-10-30):** KHÔNG có độ dài chung — mỗi VJ × format có khoảng riêng (VD Thuỷ tips 180–280, An Bình news 350–550). Nguồn duy nhất: `tiktok-script-skill` L3 "Độ Dài Theo Kênh × Format". Mỗi 60–80 từ có 1 câu hỏi/cú lật.
 
 > **Thứ tự bắt buộc khi viết script:**
 > 1. Fetch `tiktok-script-skill.md` → đọc toàn bộ

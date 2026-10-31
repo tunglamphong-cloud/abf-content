@@ -106,3 +106,13 @@
 | 18,900 | [[tap-161-cau-chuyen-bo-lo-gioi]] | — |
 | 0 | [[tap-34-tai-sao-nha-bi-duong-dam-van-giau-sang-giai-thich-phong-thuy]] | — |
 | 0 | [[tap-114-bay-ngot-ngao-ma-90-nguoi-mua-nha-lan-dau-deu-mac-phai-bay-vay-lai-tha]] | — |
+
+---
+
+## Benchmark — Hiệu quả 60 bài gần nhất (SocialLens 2026-10-30)
+
+| Note | Mô tả |
+|---|---|
+| [[VJ-NhanBDS/VJ-01-Atomic/framework/2026-10-30-benchmark-nhan-bds-review]] | View/lưu theo kiểu hook, độ dài chuẩn, gợi ý cho 4 format |
+
+→ Lời thoại mẫu: [[MOC-Benchmark-SocialLens]]
