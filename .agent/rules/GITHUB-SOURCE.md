@@ -1,6 +1,6 @@
 # GitHub Source Config
 
-Repo: https://github.com/tunglamphong-cloud/abf-vault (private)
+Repo: https://github.com/tunglamphong-cloud/abf-content (private)
 Branch: main
 Local path: ~/Downloads/ABF-Vault/
 
@@ -11,7 +11,7 @@ Local path: ~/Downloads/ABF-Vault/
 curl -s \
   -H "Authorization: token $GITHUB_TOKEN" \
   -H "Accept: application/vnd.github.v3.raw" \
-  "https://api.github.com/repos/tunglamphong-cloud/abf-vault/contents/{PATH}"
+  "https://api.github.com/repos/tunglamphong-cloud/abf-content/contents/{PATH}"
 ```
 
 Ví dụ đọc MOC-MASTER:
@@ -19,7 +19,7 @@ Ví dụ đọc MOC-MASTER:
 curl -s \
   -H "Authorization: token $GITHUB_TOKEN" \
   -H "Accept: application/vnd.github.v3.raw" \
-  "https://api.github.com/repos/tunglamphong-cloud/abf-vault/contents/MOC-MASTER.md"
+  "https://api.github.com/repos/tunglamphong-cloud/abf-content/contents/MOC-MASTER.md"
 ```
 
 ## Vì sao dùng API thay vì web/HTML
@@ -34,7 +34,7 @@ curl -s \
 ```bash
 curl -s \
   -H "Authorization: token $GITHUB_TOKEN" \
-  "https://api.github.com/repos/tunglamphong-cloud/abf-vault/contents/TD-TraDa/TD-MOC" \
+  "https://api.github.com/repos/tunglamphong-cloud/abf-content/contents/TD-TraDa/TD-MOC" \
   | python3 -c "import sys,json; [print(f['path']) for f in json.load(sys.stdin)]"
 ```
 

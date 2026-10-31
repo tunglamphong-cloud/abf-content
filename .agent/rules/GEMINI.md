@@ -8,22 +8,22 @@
 ## ⚙️ HỆ THỐNG — Vault kết nối qua GitHub Raw URL
 
 ```
-Base URL: https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main
+Base URL: https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main
 Tool:     [crawler] — có sẵn trong Antigravity, không cần cài thêm gì
 ```
 
 **Cách đọc bất kỳ file nào trong vault:**
 ```
-fetch: https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/<path-tới-file>
+fetch: https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/<path-tới-file>
 ```
 
 Ví dụ:
 ```
 MEMORY/decisions.md
-→ https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/MEMORY/decisions.md
+→ https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/MEMORY/decisions.md
 
 .agent/workflows/TikTok-case-study-workflow.md
-→ https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/.agent/workflows/TikTok-case-study-workflow.md
+→ https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/.agent/workflows/TikTok-case-study-workflow.md
 ```
 
 > ⛔ KHÔNG dùng `run_command`, `curl`, `mcp_obsidian_*`, hay bất kỳ MCP server nào khác.
@@ -240,11 +240,11 @@ Bước nào quá thời gian → ghi nhận, bỏ qua, sang bước tiếp. KH�
 Fetch **song song cùng lúc** 5 URLs sau bằng [crawler]:
 
 ```
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/.agent/rules/VAULT-STRUCTURE-REF.md
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/MEMORY/decisions.md
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/MEMORY/blockers.md
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/MEMORY/sessions-log.md
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/MEMORY/preferences.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/.agent/rules/VAULT-STRUCTURE-REF.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/MEMORY/decisions.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/MEMORY/blockers.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/MEMORY/sessions-log.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/MEMORY/preferences.md
 ```
 
 File nào fetch thất bại → bỏ qua, tiếp tục. ⏱️ Timeout 20 giây tổng.
@@ -273,7 +273,7 @@ VJ gửi files + links + text → AG KHÔNG chỉ ACK, phải:
 Dựa trên hiểu biết từ Bước 1, fetch MOC trước để biết vault có gì:
 
 ```
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/MOC-MASTER.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/MOC-MASTER.md
 ```
 
 Từ MOC, xác định 1–2 file atomic notes liên quan nhất → fetch thêm bằng [crawler].
@@ -344,11 +344,11 @@ Ví dụ: VJ = Khang + format = talking-head → `VJ/VJ-Khang/scripts/talking-he
 
 → **Lấy danh sách file trong folder bằng GitHub Contents API** (bước bắt buộc trước khi fetch bất kỳ script nào):
 ```
-GET https://api.github.com/repos/tunglamphong-cloud/abf-vault/contents/VJ/[VJ-folder]/scripts/[format-folder]
+GET https://api.github.com/repos/tunglamphong-cloud/abf-content/contents/VJ/[VJ-folder]/scripts/[format-folder]
 ```
 Ví dụ: VJ = Khang + format = talking-head →
 ```
-https://api.github.com/repos/tunglamphong-cloud/abf-vault/contents/VJ/VJ-Khang/scripts/talking-head
+https://api.github.com/repos/tunglamphong-cloud/abf-content/contents/VJ/VJ-Khang/scripts/talking-head
 ```
 → API trả về JSON array chứa `name` của từng file → dùng danh sách này để fetch raw URL từng file.
 ⛔ KHÔNG tự đoán tên file — phải lấy từ API trước.
@@ -490,16 +490,16 @@ Fetch workflow file bằng [crawler]:
 
 ```
 # News Viral:
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/.agent/workflows/TikTok-news-viral-workflow.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/.agent/workflows/TikTok-news-viral-workflow.md
 
 # Case Study:
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/.agent/workflows/TikTok-case-study-workflow.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/.agent/workflows/TikTok-case-study-workflow.md
 
 # Kiến Thức Vay Vốn:
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/.agent/workflows/Tiktok_Kiến_Thức_Vay_Vốn_KTVV_Workflow.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/.agent/workflows/Tiktok_Kiến_Thức_Vay_Vốn_KTVV_Workflow.md
 
 # An Bình Là Ai:
-https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/.agent/workflows/Tiktok_An_Binh_La_Ai_ABLA_Workflow.md
+https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/.agent/workflows/Tiktok_An_Binh_La_Ai_ABLA_Workflow.md
 ```
 
 **⛔ SAU KHI LOAD WORKFLOW:**
@@ -538,7 +538,7 @@ Routing: tin tức/news/thời sự → News Viral · case study/hồ sơ/khách
 ## QUY TẮC 4 — ĐỌC VAULT QUA RAW URL (BẮT BUỘC)
 
 ```
-Base: https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/
+Base: https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/
 Tool: [crawler]
 ```
 
@@ -566,8 +566,8 @@ Output lưu **trên máy VJ** — KHÔNG ghi ngược lên GitHub.
 
 ## Thông tin hệ thống
 ```
-Vault:     https://github.com/tunglamphong-cloud/abf-vault (public, branch: main)
-Raw Base:  https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/
+Vault:     https://github.com/tunglamphong-cloud/abf-content (public, branch: main)
+Raw Base:  https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/
 Access:    [crawler] — không cần token, không cần cài thêm
 Workflows: News Viral (ABVV) · Case Study (Khang/Huy/Duke/Tuyết Anh)
 NbLM:      ABF-Working-Memory

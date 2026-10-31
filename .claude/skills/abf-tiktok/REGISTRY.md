@@ -1,7 +1,7 @@
 # ABF Skill Registry — tên skill trong workflow → nơi định nghĩa
 
 > Khi workflow ghi `GỌI: [skill-name]` → tra bảng này để biết đọc ở đâu.
-> Base raw URL: `https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/`
+> Base raw URL: `https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/`
 > Fallback local: `C:\Users\Lenovo\Downloads\ABF-Vault\` (cùng path tương đối)
 >
 > Loại:

@@ -34,7 +34,7 @@ Không rõ loại → HỎI VJ trước khi tiếp tục.
 | News Viral | `.agent/workflows/TikTok-news-viral-workflow.md` | `mcp_github_get_file_contents(path=".agent/workflows/TikTok-news-viral-workflow.md")` |
 | Case Study | `.agent/workflows/TikTok-case-study-workflow.md` | `mcp_github_get_file_contents(path=".agent/workflows/TikTok-case-study-workflow.md")` |
 
-> Tất cả paths đều thuộc repo `tunglamphong-cloud/abf-vault`, branch `main`.
+> Tất cả paths đều thuộc repo `tunglamphong-cloud/abf-content`, branch `main`.
 
 ---
 
@@ -56,7 +56,7 @@ ABVV (An Bình Vay Vốn) — kênh chính cho News Viral, channel profile nằm
 
 ## Skill Paths
 
-> **Cách load skill:** `mcp_github_get_file_contents(path="<GitHub Path>", owner="tunglamphong-cloud", repo="abf-vault", branch="main")`
+> **Cách load skill:** `mcp_github_get_file_contents(path="<GitHub Path>", owner="tunglamphong-cloud", repo="abf-content", branch="main")`
 
 ### General Skills (dùng cho cả 2 workflows)
 | Skill | GitHub Path |
@@ -138,7 +138,7 @@ ABVV (An Bình Vay Vốn) — kênh chính cho News Viral, channel profile nằm
 ## Vault Structure (GitHub repo)
 
 ```
-tunglamphong-cloud/abf-vault @ main
+tunglamphong-cloud/abf-content @ main
 
 00-Inbox/          ← raw news, verification logs, temp files
 01-Atomic/

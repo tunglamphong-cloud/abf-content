@@ -8,7 +8,7 @@ description: Brainstorm trước khi làm content ABF — define khái niệm, r
 Nội dung skill nằm trong vault, KHÔNG chép lại ở đây để tránh lệch phiên bản.
 
 1. Đọc TOÀN BỘ file skill gốc trước khi thực thi:
-   - `https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/.agent/skills/content-brainstorm.md`
+   - `https://raw.githubusercontent.com/tunglamphong-cloud/abf-content/main/.agent/skills/content-brainstorm.md`
    - Fallback nếu WebFetch lỗi / chưa push lên GitHub: file local `.agent/skills/content-brainstorm.md` trong vault.
 2. Skill này KHÔNG chạy bootstrap POPUP 1/2 + Phase 0 đầy đủ của CLAUDE.md — chỉ chạy "Bước 0 — Khởi động rút gọn" trong file skill.
 3. Làm đúng theo file đó: Bước 0 → 1 (research) → 2 (Concept Card) → 3 (đúng 10 câu, mỗi câu 1 AskUserQuestion) → 4 (Brainstorm Brief) → 5 (checkpoint + bàn giao).
