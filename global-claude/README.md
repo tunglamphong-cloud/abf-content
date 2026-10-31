@@ -14,13 +14,13 @@ Repo này chứa đủ để dùng ABF trên máy khác:
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/gracenguyenai-boop/abf-vault.git "$HOME\Downloads\ABF-Vault"
+git clone https://github.com/tunglamphong-cloud/abf-vault.git "$HOME\Downloads\ABF-Vault"
 powershell -ExecutionPolicy Bypass -File "$HOME\Downloads\ABF-Vault\global-claude\install.ps1"
 ```
 
 **macOS / Linux:**
 ```bash
-git clone https://github.com/gracenguyenai-boop/abf-vault.git ~/Downloads/ABF-Vault
+git clone https://github.com/tunglamphong-cloud/abf-vault.git ~/Downloads/ABF-Vault
 bash ~/Downloads/ABF-Vault/global-claude/install.sh
 ```
 

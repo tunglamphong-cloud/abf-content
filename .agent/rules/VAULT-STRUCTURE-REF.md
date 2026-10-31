@@ -241,7 +241,7 @@ Chủ đề → Bước 0 rút gọn (memory + MOC + chân dung KH) → Research
 > ⚠️ Khi workflow gọi `[skill-name]` → fetch đúng file skill dưới đây bằng [crawler]/WebFetch.
 > KHÔNG tự diễn giải skill — phải đọc file trước khi thực thi.
 
-### Skill paths (Base: `https://raw.githubusercontent.com/gracenguyenai-boop/abf-vault/main/`)
+### Skill paths (Base: `https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/`)
 
 | Skill gọi trong workflow | Path file | Dùng khi |
 |---|---|---|

@@ -14,7 +14,7 @@ Kênh hợp lệ: CHỈ An Bình Vay Vốn (format: talking-head · tips-nhanh) 
 1. **Bootstrap (CLAUDE.md)** — chỉ hỏi phần còn thiếu: Kênh (nếu chưa có trong `$ARGUMENTS`) → POPUP 2 (Nội dung + Format theo bảng format của CLAUDE.md cho An Bình Là Ai) → POPUP 2.5 nếu cần.
 2. **PHASE 0** của CLAUDE.md — Bước 0 → 6, không bỏ bước (Bước 2.5 + 2.6 bắt buộc).
 3. **Load workflow** (đọc TOÀN BỘ trước khi làm):
-   - `https://raw.githubusercontent.com/gracenguyenai-boop/abf-vault/main/.agent/workflows/Tiktok_An_Binh_La_Ai_ABLA_Workflow.md`
+   - `https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/.agent/workflows/Tiktok_An_Binh_La_Ai_ABLA_Workflow.md`
    - Fallback nếu WebFetch lỗi: file local `.agent/workflows/Tiktok_An_Binh_La_Ai_ABLA_Workflow.md` trong vault.
 4. Bỏ Phase 0 của workflow (CLAUDE Phase 0 đã thay thế), chạy Phase 1 → N, báo cáo sau mỗi Phase.
 5. Mỗi `GỌI: [skill]` → tra [REGISTRY.md](../abf-tiktok/REGISTRY.md). Skill loại FILE → đọc file trước khi thực thi (`/tiktok-script-skill`, `/success-framework-scorer`).

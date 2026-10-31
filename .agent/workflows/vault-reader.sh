@@ -4,7 +4,7 @@
 #        ./vault-reader.sh "TD-TraDa/TD-MOC/TD-L3-TC-MOC.md"
 # Cần: export GITHUB_TOKEN=ghp_...
 
-REPO="gracenguyenai-boop/abf-vault"
+REPO="tunglamphong-cloud/abf-vault"
 FILE_PATH="$1"
 
 if [ -z "$GITHUB_TOKEN" ]; then

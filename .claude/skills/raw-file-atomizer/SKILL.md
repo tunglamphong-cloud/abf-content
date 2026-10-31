@@ -8,7 +8,7 @@ description: Atomize file raw (PDF, audio, link, ảnh, text) thành atomic note
 Nội dung skill nằm trong vault, KHÔNG chép lại ở đây để tránh lệch phiên bản.
 
 1. Đọc TOÀN BỘ file skill gốc trước khi thực thi:
-   - `https://raw.githubusercontent.com/gracenguyenai-boop/abf-vault/main/.agent/skills/raw-file-atomizer/SKILL.md`
+   - `https://raw.githubusercontent.com/tunglamphong-cloud/abf-vault/main/.agent/skills/raw-file-atomizer/SKILL.md`
    - Fallback nếu WebFetch lỗi: file local `.agent/skills/raw-file-atomizer/SKILL.md` trong vault.
 2. Làm đúng theo file đó. Không tự diễn giải.
 3. Khi skill gốc nhắc `references/*` hoặc `examples/*` → đọc trong `.agent/skills/raw-file-atomizer/references/` và `.../examples/`.
