@@ -24,6 +24,16 @@ layer: L2
 
 ---
 
+## Import NMB Hub (2026-11-09)
+
+| Note | Mô tả | Dùng khi |
+|---|---|---|
+| [[MOC-NMB-Training]] | Giáo trình sale 18 module (telesale, tư vấn chốt, CRM, 32 câu xử lý từ chối, đạo đức, KPI) | Đào tạo LS mới · viết script tình huống khách |
+
+📁 `Shared/Shared-01-Atomic/concept/nmb-training/`
+
+---
+
 ## Template Tạo Note Mới
 
 → [[_template-shared-concept]] (tại `Shared/Shared-01-Atomic/concept/`)

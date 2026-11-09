@@ -23,6 +23,37 @@ layer: L3
 
 ---
 
+## Import NMB Hub (2026-11-09)
+
+> Đọc bản tổng hợp đã chuyển sang ngữ cảnh ABF trước: [[2026-11-09-nmb-bai-hoc-video-content-ap-dung-abf]]
+> Note gốc (nguyên văn BĐS, `status: raw`) — 📁 `L3-KienThucDacThu/nmb-hub/` · tổng quan [[MOC-NMB-Hub]]
+
+| Note | Nội dung |
+|---|---|
+| [[202610261002-dang-tiktok-khong-dang-tu-dong-dang-tay-tren-kenh-co-lich-su]] | Đăng TikTok: không đăng tự động, đăng tay trên kênh có lịch sử, luôn bật nhãn AI |
+| [[202610261002-facebook-reel-tu-dang-duoc-nhung-giu-1-2-video-ngay-reel-keo]] | Facebook Reel tự đăng được nhưng giữ 1–2 video/ngày; Reel kéo người lạ tốt |
+| [[202610261002-giong-doc-video-cam-sot-thua-lap-chu-luon-soat-bang-whisper]] | Giọng đọc video cấm sót, thừa, lặp chữ — luôn soát bằng Whisper |
+| [[202610261002-google-flow-chi-1-3-clip-moi-video-chon-4-6-8-giay-theo-do-d]] | Google Flow: chỉ 1–3 clip mỗi video, chọn 4/6/8 giây theo độ dài câu |
+| [[202610261002-hook-an-view-so-tien-vi-du-cu-the-tin-nong-tinh-huong-vi-mo]] | Hook ăn view: số tiền/ví dụ cụ thể, tin nóng, tình huống — vĩ mô ít view |
+| [[202610261002-nhip-video-nhac-soi-dong-110-128-bpm-giong-nhanh-mo-dau-la-h]] | Nhịp video: nhạc sôi động 110–128 BPM, giọng nhanh, mở đầu là hook ở giây 0 |
+| [[202610261002-video-ads-b-roll-co-cam-xuc-nguoi-viet-dung-doi-tuong-khong]] | Video ads: B-roll có cảm xúc, người Việt đúng đối tượng; không nhãn "Hình ảnh minh họa" |
+| [[202610261002-video-muot-xuat-60-khung-giay-clip-flow-24fps-phai-noi-suy-c]] | Video mượt: xuất 60 khung/giây, clip Flow 24fps phải nội suy, chuyển động theo thời gian t |
+| [[202610200909-google-flow-bai-hoc-lai-tu-dong-19-10-2026]] | Google Flow – bài học lái tự động 19/10/2026 |
+| [[202610200909-quy-tac-hinh-anh-video-nmb-anh-chot-19-10-2026]] | Quy tắc hình ảnh video NMB anh chốt 19/10/2026 |
+| [[202610200909-skill-lam-video-ai-tu-kich-ban-bang-google-flow-nmb-video-fl]] | Skill làm video AI từ kịch bản bằng Google Flow (nmb-video-flow) |
+| [[202610200909-skill-nmb-video-flow-anh-bao-day-them-nhung-gi-khi-lam-video]] | Skill nmb-video-flow: anh Bảo dạy thêm những gì khi làm video Onsen (18/10/2026)? |
+| [[202610230811-cong-thuc-lam-video-nguoi-dan-chuyen-tiet-kiem-credit-23-10]] | Công thức làm video người dẫn chuyện tiết kiệm credit (23/10/2026) |
+| [[202610230822-dan-chung-trong-video-nmb-lay-tu-nhieu-nguon-khong-chi-vneco]] | Dẫn chứng trong video NMB lấy từ nhiều nguồn, không chỉ VnEconomy |
+| [[202610230822-doan-ket-video-nmb-phai-nhan-manh-follow-kenh-va-doc-du-cham]] | Đoạn kết video NMB phải nhấn mạnh follow kênh và đọc đủ chậm |
+| [[202610230822-giong-doc-video-nmb-tuyet-doi-khong-duoc-sot-chu-hay-lap-tu]] | Giọng đọc video NMB tuyệt đối không được sót chữ hay lặp từ |
+| [[202610230822-nhip-video-nmb-nhanh-hap-dan-khong-keo-dai-khong-nhat-thiet]] | Nhịp video NMB: nhanh, hấp dẫn, không kéo dài, không nhất thiết trên 2 phút |
+| [[202610240900-dang-tiktok-bang-script-lai-trinh-duyet-bi-nghi-bot-kenh-chi]] | Đăng TikTok bằng script lái trình duyệt bị nghi bot, kênh chỉ 0–11 view |
+| [[202610240900-lop-chuyen-dong-gsap-da-gan-vao-ban-tin-flow-va-nmb-video]] | Lớp chuyển động GSAP đã gắn vào Bản tin, Flow và nmb video |
+| [[202610240900-moi-video-nmb-chi-dung-1-3-clip-flow]] | Mỗi video NMB chỉ dùng 1–3 clip Flow |
+| [[202610240909-kich-ban-dua-vao-vbee-viet-cau-lien-it-dau-phay-khong-xuong]] | Kịch bản đưa vào Vbee viết câu liền, ít dấu phẩy, không xuống dòng, tốc độ 1,05x. |
+
+---
+
 ## Notes Placeholder (Chưa Có File)
 
 | Note | Mô tả | Dùng khi |

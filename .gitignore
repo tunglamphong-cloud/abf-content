@@ -22,3 +22,6 @@ outputs/
 
 # Claude Code local settings (per-machine)
 .claude/settings.local.json
+
+# Tri thức nội bộ NMB Hub (bảng hàng, CSBH, quét SĐT) — chỉ lưu local, KHÔNG đẩy lên GitHub public
+_private/

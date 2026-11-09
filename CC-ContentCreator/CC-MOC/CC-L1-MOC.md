@@ -25,6 +25,21 @@ layer: L1
 
 ---
 
+## Import NMB Hub (2026-11-09)
+
+> Quy trình làm video & nội dung thương hiệu của đội NMB — 📁 `L1-Framework/nmb-hub/` · tổng quan [[MOC-NMB-Hub]]
+> 3 note hotline trùng ý — bản đầy đủ nhất: [[202610261002-luat-hotline-video-thuong-hieu-ca-nhan-khong-hotline-chi-vid]]
+
+| Note | Nội dung |
+|---|---|
+| [[202610261002-luat-hotline-video-thuong-hieu-ca-nhan-khong-hotline-chi-vid]] | Luật hotline: video thương hiệu cá nhân không hotline, chỉ video ads có hotline |
+| [[202610200909-quy-trinh-lam-video]] | QUY TRÌNH: LÀM VIDEO |
+| [[202610200909-quy-trinh-noi-dung-thuong-hieu-nmb]] | QUY TRÌNH: NỘI DUNG THƯƠNG HIỆU NMB |
+| [[202610240900-video-xay-thuong-hieu-ca-nhan-khong-co-hotline-chi-video-ads]] | Video xây thương hiệu cá nhân không có hotline, chỉ video ads giữ hotline |
+| [[202610240909-video-thuong-hieu-ca-nhan-khong-co-hotline-video-ads-du-an-g]] | Video thương hiệu cá nhân không có hotline, video ADS dự án giữ hotline. |
+
+---
+
 ## Template Tạo Note Mới
 
 → [[_template-framework]] (tại `CC-ContentCreator/CC-01-Atomic/L1-Framework/`)

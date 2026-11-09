@@ -57,6 +57,12 @@
 
 ---
 
+## Import NMB Hub → [[MOC-NMB-Hub]]
+
+Tri thức đội NMB (2026-11-09): giáo trình sale [[MOC-NMB-Training]], quy trình marketing, công cụ agent. Phần riêng tư (dự án BĐS, quét SĐT) ở `_private/` — chỉ trên máy.
+
+---
+
 ## Inbox
 
 → Raw input chưa phân loại: `Shared/Shared-00-Inbox/`

@@ -24,6 +24,16 @@ layer: L3
 
 ---
 
+## Import NMB Hub (2026-11-09)
+
+| Note | Mô tả | Dùng khi |
+|---|---|---|
+| [[MOC-NMB-Hub]] | Quy trình ads/lead/landing page + công cụ agent (Zalo, Google Flow, taoweb, Vbee) | Chạy quảng cáo, dựng landing page, tự động hoá |
+
+📁 `Shared/Shared-01-Atomic/framework/nmb-marketing/` · `framework/nmb-cong-cu/`
+
+---
+
 ## Template Tạo Note Mới
 
 → [[_template-shared-domain]] (tại `Shared/Shared-01-Atomic/framework/`)

@@ -19,3 +19,6 @@ Category: SYSTEM / WORKFLOW / VAULT / VJ / CONTENT
 [2026-05-20] [VAULT] Feed Loop ghi tại FEED-LOOP/ sau mỗi workflow run — Vòng lặp compound knowledge
 [2026-10-30] [CONTENT] Bỏ chuẩn chung 500–700 từ cho mọi format: độ dài theo bảng VJ × format trong `tiktok-script-skill` L3 — Dữ liệu SocialLens ngách vay vốn: bài viral ngắn hơn trung vị (ABF top 300–330, Thuỷ #29 191 từ); chuẩn 600 của Huyền là ngách chứng khoán
 [2026-10-30] [WORKFLOW] Phase 0 Bước 2.5 bắt buộc load benchmark SocialLens (`VJ/_benchmark-sociallens/`) theo VJ → `[BENCHMARK]` + `[BENCHMARK SAMPLES]` — Học từ mẫu có số liệu view/lưu thật
+[2026-11-05] [SYSTEM] Đổi định danh từ NMB sang "Tùng Lâm Tài chính Việt Nam", bỏ code NMB cũ — gộp từ 9 ghi nhớ cá nhân trùng nhau trong NMB Hub
+[2026-11-05] [CONTENT] Video làm xong gửi vào 2 nhóm Zalo: "ABF salecontent" và "Anbinh - Trao đổi SaleContent" — nguồn NMB Hub (ca-nhan/04-van-hanh)
+[2026-11-09] [VAULT] Nhập tri thức NMB Hub vào vault (xem [[MOC-NMB-Hub]]); dự án BĐS, báo giá, quét SĐT Facebook để ở `_private/` (gitignore) — vault đồng bộ lên GitHub public, không được lộ bảng hàng nội bộ / dữ liệu khách

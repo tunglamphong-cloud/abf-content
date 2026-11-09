@@ -40,6 +40,14 @@ TIER 3   (shells)    7 notes    94 notes    1 note     47 scripts Khang
 
 ---
 
+## Nguồn Nhập Ngoài
+
+| Nguồn | MOC | Ghi chú |
+|---|---|---|
+| NMB Hub (agent đội NMB) — import 2026-11-09 | [[MOC-NMB-Hub]] | 142 note; bản đã tối ưu cho ABF: [[2026-11-09-nmb-bai-hoc-video-content-ap-dung-abf]]. Phần `_private/` không lên GitHub |
+
+---
+
 ## Toàn Bộ Sub-MOC Tầng 2
 
 ### CC — Content Creator
