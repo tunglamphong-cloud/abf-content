@@ -1,6 +1,6 @@
 ---
 name: abf-lead-to-bank
-description: Quy trình chuyển lead vay đạt chuẩn cho ngân hàng/cán bộ tín dụng đối tác theo mô hình CTV/đại lý hưởng hoa hồng: kiểm tra thỏa thuận NH, tiêu chí lead đạt, xin đồng ý riêng của khách (NĐ 13/2023), bàn giao theo mã lead, theo dõi và đối soát hoa hồng.
+description: "Quy trình chuyển lead vay đạt chuẩn cho ngân hàng/cán bộ tín dụng đối tác theo mô hình CTV/đại lý hưởng hoa hồng: kiểm tra thỏa thuận NH, tiêu chí lead đạt, xin đồng ý riêng của khách (NĐ 13/2023), bàn giao theo mã lead, theo dõi và đối soát hoa hồng."
 ---
 
 # abf-lead-to-bank (wrapper → vault)

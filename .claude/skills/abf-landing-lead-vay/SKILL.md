@@ -1,6 +1,6 @@
 ---
 name: abf-landing-lead-vay
-description: Dựng/sửa landing page thu lead vay cho kênh VJ ABF: cấu trúc 6 khối, form hồ sơ vay, 2 ô đồng ý tách riêng (tư vấn / chia sẻ NH) không tick sẵn, form server-side → Telegram/Sheet, Meta/TikTok Pixel không gửi PII. Kỹ thuật lấy từ NMB taoweb.
+description: "Dựng/sửa landing page thu lead vay cho kênh VJ ABF: cấu trúc 6 khối, form hồ sơ vay, 2 ô đồng ý tách riêng (tư vấn / chia sẻ NH) không tick sẵn, form server-side → Telegram/Sheet, Meta/TikTok Pixel không gửi PII. Kỹ thuật lấy từ NMB taoweb."
 ---
 
 # abf-landing-lead-vay (wrapper → vault)

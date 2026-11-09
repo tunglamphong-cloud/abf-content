@@ -1,6 +1,6 @@
 ---
 name: abf-bao-cao-funnel
-description: Báo cáo funnel ABF: video/ads → lead → lead đạt → cam kết → nộp NH → giải ngân → doanh thu (phí + hoa hồng) theo VJ, video, chiến dịch; CPL, doanh thu/lead, ROAS; quy tắc vận hành ads Facebook giữ từ NMB. Dùng cho báo cáo ngày/tuần/tháng.
+description: "Báo cáo funnel ABF: video/ads → lead → lead đạt → cam kết → nộp NH → giải ngân → doanh thu (phí + hoa hồng) theo VJ, video, chiến dịch; CPL, doanh thu/lead, ROAS; quy tắc vận hành ads Facebook giữ từ NMB. Dùng cho báo cáo ngày/tuần/tháng."
 ---
 
 # abf-bao-cao-funnel (wrapper → vault)

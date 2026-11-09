@@ -1,6 +1,6 @@
 ---
 name: abf-telesale-vay
-description: Kịch bản gọi lại lead vay ABF: mở đầu dưới 15 giây theo nguồn (bình luận TikTok / form / inbox), 5 câu hỏi lọc, kết bằng một bước nhỏ có thời điểm, xử lý 'sao có số tôi' và 'đừng gọi nữa', nhịp chăm theo đường đi.
+description: "Kịch bản gọi lại lead vay ABF: mở đầu dưới 15 giây theo nguồn (bình luận TikTok / form / inbox), 5 câu hỏi lọc, kết bằng một bước nhỏ có thời điểm, xử lý 'sao có số tôi' và 'đừng gọi nữa', nhịp chăm theo đường đi."
 ---
 
 # abf-telesale-vay (wrapper → vault)

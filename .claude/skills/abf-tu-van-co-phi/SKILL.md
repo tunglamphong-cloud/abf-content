@@ -1,6 +1,6 @@
 ---
 name: abf-tu-van-co-phi
-description: Gói tư vấn vay có phí ABF: phí = % số tiền giải ngân theo thỏa thuận với khách, chỉ thu khi giải ngân; song song hoa hồng giới thiệu NH trả theo quy định từng NH (phải công bố cho khách). Soạn phương án tư vấn, câu chốt, khung hợp đồng dịch vụ, phạm vi làm / không làm.
+description: "Gói tư vấn vay có phí ABF: phí = % số tiền giải ngân theo thỏa thuận với khách, chỉ thu khi giải ngân; song song hoa hồng giới thiệu NH trả theo quy định từng NH (phải công bố cho khách). Soạn phương án tư vấn, câu chốt, khung hợp đồng dịch vụ, phạm vi làm / không làm."
 ---
 
 # abf-tu-van-co-phi (wrapper → vault)

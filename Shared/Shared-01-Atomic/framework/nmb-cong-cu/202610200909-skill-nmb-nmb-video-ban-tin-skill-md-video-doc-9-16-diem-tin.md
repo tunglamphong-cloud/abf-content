@@ -97,7 +97,7 @@ Dùng khi anh Bảo muốn làm video bản tin / điểm tin thị trường t�
 
 ### 7. Giao
 - Gửi MP4 + zip ảnh trang báo bằng SendUserFile (đặt tên file dễ hiểu), đồng thời `device_commit_files` vào `(thư mục làm việc trên máy)>\`.
-- Viết caption Facebook 3 bản: **Phân tích đầy đủ** / **Ngắn gọn, kéo xem video** / **Chạm nỗi lo người mua**. Luôn có dòng nguồn VnEconomy, hashtag #NMB #MauBao #BanTinBDS, lời kêu gọi inbox hoặc gọi 0933 235 444.
+- Viết caption Facebook 3 bản: **Phân tích đầy đủ** / **Ngắn gọn, kéo xem video** / **Chạm nỗi lo người mua**. Luôn có dòng nguồn VnEconomy, hashtag #NMB #MauBao #BanTinBDS, lời kêu gọi inbox hoặc gọi <SĐT-đã-ẩn>.
 - Nhắc anh: ảnh của báo chỉ dùng cho điểm tin trên kênh, không dùng chạy quảng cáo trả tiền.
 
 ## Lỗi đã gặp – không lặp lại

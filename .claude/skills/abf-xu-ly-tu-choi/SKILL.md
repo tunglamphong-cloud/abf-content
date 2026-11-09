@@ -1,6 +1,6 @@
 ---
 name: abf-xu-ly-tu-choi
-description: Kho xử lý từ chối của khách vay ABF (phí, tự làm được, bị NH từ chối, CIC, thu nhập tiền mặt, sợ lừa đảo, để suy nghĩ…) theo 3 nguyên tắc và 4 phần: lo thật · phản hồi đầu · câu hỏi đào sâu · câu chuyển bước. Dùng khi chuẩn bị gọi, luyện tập, hoặc bổ sung câu mới.
+description: "Kho xử lý từ chối của khách vay ABF (phí, tự làm được, bị NH từ chối, CIC, thu nhập tiền mặt, sợ lừa đảo, để suy nghĩ…) theo 3 nguyên tắc và 4 phần: lo thật · phản hồi đầu · câu hỏi đào sâu · câu chuyển bước. Dùng khi chuẩn bị gọi, luyện tập, hoặc bổ sung câu mới."
 ---
 
 # abf-xu-ly-tu-choi (wrapper → vault)
