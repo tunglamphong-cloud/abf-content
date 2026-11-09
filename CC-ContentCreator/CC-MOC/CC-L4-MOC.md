@@ -14,6 +14,12 @@ layer: L4
 
 ---
 
+## Notes Thực
+
+| Wikilink | Mô tả | Skill |
+|---|---|---|
+| [[2026-11-09-bao-cao-funnel-ads-lead-giai-ngan]] | Báo cáo video/ads → lead → giải ngân → doanh thu; quy tắc ads giữ từ NMB | `/abf-bao-cao-funnel` |
+
 ## Notes (Placeholder — chưa có file thực)
 
 | Note | Mô tả | Dùng khi |

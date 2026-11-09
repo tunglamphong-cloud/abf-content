@@ -24,6 +24,13 @@ layer: L2
 
 ---
 
+## Kỹ Năng Sale Vay (2026-11-09, chuyển từ NMB Training)
+
+| Wikilink | Mô tả | Skill |
+|---|---|---|
+| [[2026-11-09-telesale-goi-lai-lead-vay]] | Gọi lại lead vay: mở 15 giây, 5 câu hỏi, 1 bước nhỏ, nhịp chăm | `/abf-telesale-vay` |
+| [[2026-11-09-kho-xu-ly-tu-choi-khach-vay]] | 12 câu từ chối của khách vay (phí, ngân hàng, niềm tin) | `/abf-xu-ly-tu-choi` |
+
 ## Templates
 
 | Template | Dùng khi |

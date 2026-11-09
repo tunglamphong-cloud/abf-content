@@ -14,6 +14,10 @@ created: 2026-11-09
 > **Bản đã tối ưu cho ABF:** [[2026-11-09-nmb-bai-hoc-video-content-ap-dung-abf]] (CC L3) — đọc file này trước.
 > **Parent:** [[MOC-Shared]] · [[MOC-MASTER]]
 
+## Đã chuyển thành tri thức ABF (2026-11-09)
+
+→ [[2026-11-09-mapping-nmb-sang-abf]] — 7 skill: `/abf-lead-scoring` · `/abf-lead-to-bank` · `/abf-tu-van-co-phi` · `/abf-telesale-vay` · `/abf-xu-ly-tu-choi` · `/abf-landing-lead-vay` · `/abf-bao-cao-funnel`. Pháp lý: [[2026-11-09-abf-checklist-phap-ly-can-luat-su]].
+
 ## Bản đồ nhập
 
 | Nhánh NMB | Số note | Vị trí trong ABF-Vault | MOC |

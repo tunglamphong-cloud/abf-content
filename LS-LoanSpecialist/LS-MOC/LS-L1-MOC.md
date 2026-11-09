@@ -20,6 +20,16 @@ layer: L1
 |---|---|
 | [[2026-01-12-quy-trinh-tin-dung-7-buoc]] | Quy trình tín dụng 7 bước: từ tìm KH đến tất toán — nguồn trả nợ KHCN |
 
+## Vận Hành Kinh Doanh ABF (2026-11-09)
+
+| Wikilink | Mô tả | Skill |
+|---|---|---|
+| [[2026-11-09-cham-diem-phan-loai-lead-vay]] | Chấm điểm 0–100 + Venn → Chuyển NH / Gói phí / Nuôi tiếp / Loại; pipeline 8 giai đoạn | `/abf-lead-scoring` |
+| [[2026-11-09-quy-trinh-chuyen-lead-ngan-hang]] | Chuyển lead cho NH (CTV hưởng hoa hồng): đồng ý của khách, bàn giao, đối soát | `/abf-lead-to-bank` |
+| [[2026-11-09-goi-tu-van-vay-co-phi]] | Gói tư vấn thu % giải ngân, chỉ thu khi giải ngân, công bố hoa hồng NH | `/abf-tu-van-co-phi` |
+
+> Đọc kèm: [[2026-11-09-abf-checklist-phap-ly-can-luat-su]] · nguồn gốc: [[2026-11-09-mapping-nmb-sang-abf]]
+
 ## Placeholder (chưa có file thực)
 
 | Note | Mô tả | Dùng khi |

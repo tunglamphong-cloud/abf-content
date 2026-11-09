@@ -24,6 +24,14 @@ layer: L3
 
 ---
 
+## Landing Page Thu Lead (2026-11-09)
+
+| Note | Mô tả | Dùng khi |
+|---|---|---|
+| [[2026-11-09-landing-page-thu-lead-vay]] | Form hồ sơ vay, 2 ô đồng ý tách riêng, pixel không PII | `/abf-landing-lead-vay` |
+
+---
+
 ## Import NMB Hub (2026-11-09)
 
 | Note | Mô tả | Dùng khi |

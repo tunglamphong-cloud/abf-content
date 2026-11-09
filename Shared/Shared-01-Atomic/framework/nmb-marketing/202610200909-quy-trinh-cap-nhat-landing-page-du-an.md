@@ -46,7 +46,7 @@ Sửa nội dung, hình ảnh, thông tin trên landing page dự án mỗi khi 
 - CẤM sửa file cấu hình, khóa bảo mật, biến môi trường.
 - CẤM tắt khóa bản xem trước của Vercel.
 - Trang phải có hình ảnh và cảm xúc, không toàn chữ.
-- Liên hệ trên trang: Nguyễn Mậu Bảo – 0933 235 444 (trừ khi anh chỉ định khác). Thương hiệu NMB, không gắn MSH.
+- Liên hệ trên trang: Nguyễn Mậu Bảo – <SĐT-đã-ẩn> (trừ khi anh chỉ định khác). Thương hiệu NMB, không gắn MSH.
 - Mọi giá ghi "đã VAT, chưa KPBT" nếu dự án áp dụng.
 
 ## Skill dùng để làm trang mới

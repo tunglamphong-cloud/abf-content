@@ -23,7 +23,7 @@ evolution_log: ["2026-11-09: import từ NMB Hub (nguyên văn, chưa chuyển n
 # QUY TRÌNH: CHẠY QUẢNG CÁO FACEBOOK
 
 ## Tài khoản
-- Anh chỉ dùng một tài khoản quảng cáo: 671959722091897 (MSH Sale Mậu Bảo 02).
+- Anh chỉ dùng một tài khoản quảng cáo: <ID-đã-ẩn> (MSH Sale Mậu Bảo 02).
 - Trong Business Manager "MSH BM 2" anh chỉ là thành viên, không phải admin → không tự tạo token CAPI được.
 - Apps Script trên Google Sheet đẩy lead trạng thái "quan tâm" hoặc "chốt" lên Meta Pixel qua Conversions API.
 

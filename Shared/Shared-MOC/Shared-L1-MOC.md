@@ -21,6 +21,13 @@ layer: L1
 
 ---
 
+## Mô Hình Kinh Doanh ABF (2026-11-09)
+
+| Wikilink | Mô tả |
+|---|---|
+| [[2026-11-09-mapping-nmb-sang-abf]] | Mapping NMB Hub → ABF: giữ / chuyển / bỏ + 7 skill ABF |
+| [[2026-11-09-abf-checklist-phap-ly-can-luat-su]] | 5 vùng rủi ro pháp lý (NĐ 13/2023, chuyển lead, hoa hồng, phí, quảng cáo) — cần luật sư |
+
 ## Placeholder Notes (chưa có note thực)
 
 | Note | Mô tả |
