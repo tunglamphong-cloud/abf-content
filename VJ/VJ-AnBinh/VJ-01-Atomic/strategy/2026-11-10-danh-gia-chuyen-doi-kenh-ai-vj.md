@@ -13,7 +13,7 @@ maturity: seed
 review_interval: 14
 next_review: 2026-11-24
 reuse_count: 0
-evolution_log: ["2026-11-10: đánh giá ban đầu", "2026-11-10: chốt 30% AI / 70% thật", "2026-11-10: thêm đích đến lead — Case Study Phương giữ thật, AI dồn vào News đầu phễu"]
+evolution_log: ["2026-11-10: đánh giá ban đầu", "2026-11-10: chốt 30% AI / 70% thật", "2026-11-10: thêm đích đến lead — Case Study Phương giữ thật, AI dồn vào News đầu phễu", "2026-11-10: thêm bằng chứng 3 tháng chỉ News → lead ~0; cách đo lead không cần thống kê theo video; thử nghiệm 4 tuần"]
 ---
 
 # Chuyển kênh An Bình sang AI (mặt + giọng VJ) — có ổn không?
@@ -28,6 +28,10 @@ evolution_log: ["2026-11-10: đánh giá ban đầu", "2026-11-10: chốt 30% AI
 
 - **Mục tiêu:** lead hồ sơ **vay thế chấp thực tế** liên hệ / inbox. View chỉ là phương tiện.
 - **Hiện trạng:** lead đến chủ yếu từ **Case Study của Phương**. **News của Vân Anh** hút view nhưng gần như không ra inbox.
+- **Bằng chứng tự nhiên (~08–11/2026):** 3 tháng gần đây kênh không lên Case Study của Phương, **100% là News của Vân Anh → lead vay vốn gần như về 0** (theo số lead tháng của kênh).
+  - Đây là bằng chứng mạnh nhất hiện có, dù chỉ ở mức tháng.
+  - Còn một yếu tố nhiễu cần loại trừ: từ 06/2026 TikTok hạn chế các từ liên quan "inbox / nhắn tin / tư vấn" (chính video thông báo của Phương 27/06/2026 nói việc này). Một phần lead giảm có thể do luồng inbox bị chặn, không chỉ do đổi nội dung.
+- **Hành động ưu tiên số 1:** **quay lại Case Study của Phương ngay**, trước mọi việc liên quan clip AI.
 - **Hệ quả cho mô hình AI:** phần AI không được chạm vào thứ đang ra tiền.
   - **Case Study của Phương giữ 100% thật** (giọng + mặt). AI chỉ hỗ trợ đồ hoạ, phụ đề, dựng nhanh hơn.
   - **30% clip AI dồn vào đầu phễu**: News, tin nóng, mẹo ngắn bằng giọng nhân bản Vân Anh. Mỗi clip phải có đường dẫn sang Case Study.
@@ -55,10 +59,23 @@ So với hiện tại: tăng Case Study (đang là nguồn lead), giữ News ở
 - Ghim bình luận dẫn sang clip Case Study liên quan; playlist "Hồ sơ thật An Bình xử lý".
 - Chọn chủ đề News gần nhu cầu vay thế chấp 10–30 tỷ (lãi suất, định giá, pháp lý tài sản, đáo hạn) thay vì tin vĩ mô chung.
 
-### Đo lường (làm trước khi đổi thêm)
+### Đo lường — khi chưa thống kê được lead theo từng video
 
-- Mỗi lead hỏi một câu: "Anh/chị xem video nào của An Bình?" → ghi mã video vào sheet lead (skill `abf-lead-scoring` / `abf-bao-cao-funnel` nếu đã dùng).
-- Chỉ số chính: **lead đạt / 1.000 view theo loại clip** (Case Study · kiến thức · News AI). Không dùng view hay lưu để đánh giá clip nữa.
+Hiện trạng: lead đi qua TikTok inbox và link Beacons → Zalo; kênh chỉ đếm được tổng lead theo tháng. Bốn cách dưới đây không cần phần mềm mới, làm được ngay:
+
+| # | Cách | Làm thế nào | Đo được |
+|---|---|---|---|
+| 1 | **Mã theo loại clip** | Caption hoặc bình luận ghim mỗi clip có một mã ngắn: Case Study `CS`, kiến thức `KT`, News `TN`, kèm số tập (vd `CS12`). Câu kêu gọi: "nhắn mã CS12 để nhận phân tích hồ sơ tương tự". Kiểm từ cấm trước khi dùng (TikTok đang hạn chế từ "inbox / nhắn tin") | Lead theo loại clip, thậm chí theo từng clip |
+| 2 | **Tách nút Beacons** | Beacons có thống kê số lượt bấm từng nút. Tạo 2 nút riêng dẫn cùng Zalo, ví dụ "Hồ sơ giống Case Study" và "Hỏi về tin lãi suất" | Lượt bấm theo nhu cầu |
+| 3 | **Câu hỏi đầu tiên khi khách nhắn** | Người trực Zalo/inbox hỏi "Anh/chị xem clip nào của An Bình?" và ghi vào sheet lead (cột: ngày, nguồn TikTok/Zalo, mã clip hoặc mô tả) — skill `abf-telesale-vay`, `abf-lead-scoring` | Lead theo clip, dù thiếu |
+| 4 | **Đếm theo tuần thay vì tháng** | Ghi số lead mỗi tuần, đặt cạnh số Case Study / News đã đăng tuần đó | Thấy được tuần nào nhiều Case Study thì lead tăng hay không |
+
+**Thử nghiệm 4 tuần để xác nhận (không cần số theo video):**
+- Tuần 1–4: đăng lại 3–4 Case Study của Phương mỗi tuần, cùng câu kêu gọi và mã `CS`.
+- So lead theo tuần với 3 tháng chỉ có News. Lead tăng rõ → xác nhận Case Study là nguồn lead, chốt cơ cấu sprint ở trên.
+- Lead không tăng → nhiều khả năng do luồng inbox bị TikTok chặn. Khi đó ưu tiên sửa đường liên hệ (Beacons, Zalo, bình luận mã) trước khi đổi nội dung.
+
+Chỉ số chính về sau: **lead đạt / 1.000 view theo loại clip**. Không dùng view hay lưu để đánh giá clip.
 
 ## Mô hình hiện tại → đề xuất
 

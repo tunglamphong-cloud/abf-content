@@ -19,7 +19,7 @@ evolution_log: ["2026-11-10: đề xuất ban đầu (chọn theo view/lưu: Vâ
 # Giọng VJ kênh An Bình — Phương · Vân Anh · Thủy
 
 > **Đích đến của kênh:** lead hồ sơ **vay thế chấp thực tế** inbox/liên hệ — không phải view.
-> **Dữ liệu user (2026-11-10):** lead chủ yếu đến từ **clip Case Study của Phương**; clip News của Vân Anh hút view nhưng gần như không ra inbox.
+> **Dữ liệu user (2026-11-10):** lead chủ yếu đến từ **clip Case Study của Phương**; clip News của Vân Anh hút view nhưng gần như không ra inbox. 3 tháng gần đây chỉ đăng News của Vân Anh → lead vay vốn gần như về 0.
 >
 > **Kết luận:**
 > - **Phương = giọng và mặt chuyển đổi của kênh → giữ quay thật, KHÔNG nhân bản** ở giai đoạn này. Case Study ra lead vì người xem tin một người thật đã xử lý hồ sơ thật; giọng nhân bản làm mất đúng thứ đó.
@@ -66,5 +66,5 @@ Thay test "giọng nào hút view hơn" bằng test **"News AI có đẩy đư�
 
 ## Việc cần user làm
 
-- Số lead (inbox / bình luận "tư vấn" / form) theo từng video 4–8 tuần gần nhất, ít nhất tách được Case Study của Phương với News của Vân Anh.
+- Chưa có số lead theo từng video. Áp dụng 4 cách đo trong [[2026-11-10-danh-gia-chuyen-doi-kenh-ai-vj]] (mã theo loại clip, tách nút Beacons, hỏi "xem clip nào", đếm theo tuần).
 - Gửi lại link video Thủy đang công khai, hoặc file MP4.
