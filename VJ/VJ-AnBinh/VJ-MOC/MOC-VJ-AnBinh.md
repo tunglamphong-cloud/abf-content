@@ -73,8 +73,8 @@ Feed Loop     → VJ-01-Atomic/insight/insight-[date]-[topic].md
 | Note | Mô tả |
 |---|---|
 | [[VJ-AnBinh/VJ-01-Atomic/strategy/2026-05-23-dinh-huong-kenh-vay-von-an-binh]] | DNA kênh: visual chuẩn, segmentation 10-30 tỷ, persona, KPI 100K/15 ngày |
-| [[2026-11-10-de-xuat-giong-vj-clip-ai]] | Đề xuất giọng cho clip AI: Vân Anh (nhân bản) · Phương (quay thật) · Thủy (kênh riêng) + test A/B |
-| [[2026-11-10-danh-gia-chuyen-doi-kenh-ai-vj]] | Đánh giá chuyển kênh sang AI mặt + giọng: mô hình lai 30% AI / 70% quay thật, rủi ro, lộ trình |
+| [[2026-11-10-de-xuat-giong-vj-clip-ai]] | Giọng VJ theo phễu: Phương giữ thật (Case Study ra lead) · Vân Anh nhân bản cho News AI · Thủy kênh riêng |
+| [[2026-11-10-danh-gia-chuyen-doi-kenh-ai-vj]] | Mô hình 30% AI / 70% thật theo đích đến lead thế chấp: cơ cấu sprint, nối News → Case Study, đo lead/1.000 view |
 
 ---
 

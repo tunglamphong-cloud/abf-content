@@ -13,16 +13,52 @@ maturity: seed
 review_interval: 14
 next_review: 2026-11-24
 reuse_count: 0
-evolution_log: ["2026-11-10: đánh giá ban đầu"]
+evolution_log: ["2026-11-10: đánh giá ban đầu", "2026-11-10: chốt 30% AI / 70% thật", "2026-11-10: thêm đích đến lead — Case Study Phương giữ thật, AI dồn vào News đầu phễu"]
 ---
 
 # Chuyển kênh An Bình sang AI (mặt + giọng VJ) — có ổn không?
 
 > **Kết luận:** ổn, **nếu làm theo mô hình lai và có điều kiện**. Không nên thay 100% bằng avatar AI.
 > **Tỷ lệ user chốt (2026-11-10): 30% clip AI / 70% quay thật** — quay thật vẫn là chính, AI là phần bổ sung.
-> - Phần AI (30%): giọng nhân bản + B-roll và thông tin thực, dùng cho tin nóng, News và kiến thức ngắn (dòng B).
-> - Phần người thật (70%): Case Study, kiến thức chuyên sâu, thông báo, trả lời bình luận, live; mọi hook có mặt VJ thật.
+> - Phần AI (30%): giọng nhân bản **Vân Anh** + B-roll và thông tin thực, dùng cho tin nóng, News và mẹo ngắn (đầu phễu).
+> - Phần người thật (70%): **Case Study của Phương (nguồn lead chính)**, kiến thức chuyên sâu, thông báo, trả lời bình luận, live; mọi hook có mặt VJ thật.
 > - Avatar AI toàn thân/khuôn mặt: chỉ thử ở giai đoạn 2.
+
+## Đích đến của kênh (user cung cấp 2026-11-10)
+
+- **Mục tiêu:** lead hồ sơ **vay thế chấp thực tế** liên hệ / inbox. View chỉ là phương tiện.
+- **Hiện trạng:** lead đến chủ yếu từ **Case Study của Phương**. **News của Vân Anh** hút view nhưng gần như không ra inbox.
+- **Hệ quả cho mô hình AI:** phần AI không được chạm vào thứ đang ra tiền.
+  - **Case Study của Phương giữ 100% thật** (giọng + mặt). AI chỉ hỗ trợ đồ hoạ, phụ đề, dựng nhanh hơn.
+  - **30% clip AI dồn vào đầu phễu**: News, tin nóng, mẹo ngắn bằng giọng nhân bản Vân Anh. Mỗi clip phải có đường dẫn sang Case Study.
+
+### Cơ cấu sprint 34 bài đề xuất (theo vai trò phễu)
+
+| Vai trò | Nội dung | Số bài | Thật / AI | VJ |
+|---|---|---|---|---|
+| Ra lead | Case Study hồ sơ thật (mới + "tập 2" cập nhật kết quả) | **12–14** | Thật | Phương |
+| Tạo tin | Kiến thức kỹ thuật vay thế chấp chuyên sâu (dòng B), trả lời bình luận hỏi hồ sơ | 8–10 | Thật | Phương (ưu tiên) |
+| Kéo người mới | News, tin nóng, mẹo ngắn | ~10 | **AI** | Giọng nhân bản Vân Anh |
+| Niềm tin | Thông báo, hậu trường, live | 2–3 | Thật | Phương / team |
+
+So với hiện tại: tăng Case Study (đang là nguồn lead), giữ News ở mức vừa đủ kéo người mới và chuyển phần News sang AI để giải phóng thời gian quay cho Case Study.
+
+### Tăng sản lượng Case Study mà vẫn thật
+
+- **Nguồn case:** 36 hồ sơ trong `LS-…/L4-PDCA/4fcases/` (đã có 4F); ưu tiên case có kết quả giải ngân và case "bị từ chối nơi khác → An Bình làm được".
+- **Dựng theo công thức NMB nhưng giữ người thật:** Phương quay thật hook + đoạn cảm xúc + kết (1 buổi quay được nhiều case); phần giải thích hồ sơ là **giọng thật của Phương thu riêng (voice-over)** + đồ hoạ ẩn danh. Không dùng giọng nhân bản cho Case Study.
+- **Series 2 tập:** tập 1 vướng mắc, tập 2 kết quả (như AB-KS-02) → người xem quay lại, follow, inbox hỏi tiến độ.
+
+### Nối News → Case Study
+
+- Cuối mỗi News: một câu chuyển về góc người vay thế chấp + "An Bình vừa xử lý một hồ sơ như vậy, xem tập Case Study".
+- Ghim bình luận dẫn sang clip Case Study liên quan; playlist "Hồ sơ thật An Bình xử lý".
+- Chọn chủ đề News gần nhu cầu vay thế chấp 10–30 tỷ (lãi suất, định giá, pháp lý tài sản, đáo hạn) thay vì tin vĩ mô chung.
+
+### Đo lường (làm trước khi đổi thêm)
+
+- Mỗi lead hỏi một câu: "Anh/chị xem video nào của An Bình?" → ghi mã video vào sheet lead (skill `abf-lead-scoring` / `abf-bao-cao-funnel` nếu đã dùng).
+- Chỉ số chính: **lead đạt / 1.000 view theo loại clip** (Case Study · kiến thức · News AI). Không dùng view hay lưu để đánh giá clip nữa.
 
 ## Mô hình hiện tại → đề xuất
 
