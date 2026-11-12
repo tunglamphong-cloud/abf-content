@@ -20,6 +20,8 @@ layer: L3
 |---|---|---|
 | [[2026-04-18-tu-cam-tiktok-tai-chinh-do-manh]] | 19 từ/cụm cấm mức độ mạnh trên TikTok tài chính | Trước khi viết/duyệt script |
 | [[2026-04-10-research-tiktok-mau-huyen-le-p1]] | Research 10+ kênh TikTok mẫu: hook, views, visual, BGM | Tham khảo pattern viral khi viết hook |
+| [[2026-11-10-quy-trinh-dung-clip-ai-abf]] | Quy trình dựng clip AI 9:16: dòng A Case Study, dòng B kiến thức; skill `abf-video-clip` | Khi có kịch bản đã duyệt + giọng VJ |
+| [[_template-video-dong-b-kien-thuc]] | Template kịch bản + bảng cảnh dòng B (6 khối, không hotline) | Viết clip kiến thức kỹ thuật vay vốn |
 
 ---
 
